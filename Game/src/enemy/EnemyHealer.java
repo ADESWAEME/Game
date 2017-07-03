@@ -1,10 +1,9 @@
-package hero;
+package enemy;
 
-public class Damager extends Character {
+public class EnemyHealer extends EnemyCharacter{
 
-	
-	public int Dam(){
-		System.out.println("Hero : Damager");
+	public int EnHeal(){
+		System.out.println("Enemy : Healer");
 		this.lifePoint();
 		this.attack();
 		return 0;
@@ -14,22 +13,22 @@ public class Damager extends Character {
 	@Override
 	public void lifePoint() {
 		// TODO Auto-generated method stub
-		int lifePoint = 3;
+		int lifePoint = 4;
 		System.out.println("Life point : " + lifePoint);
 	}
 
 	@Override
 	public void attack() {
 		// TODO Auto-generated method stub
-		int attack = 2;
+		int attack = 1;
 		System.out.println("Attack : " + attack);
 	}
+
+	
 
 //	@Override
 //	public void specialPower() {
 //		// TODO Auto-generated method stub
-//		int specialPower = damageReceived; //(créer une classe méchant et mettre les dommages que peuvent faire les monstres en méthodes)
+//		int specialPower = this.lifePoint + 2;
 //	}
-
-	
 }

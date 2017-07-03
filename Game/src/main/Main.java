@@ -1,7 +1,8 @@
 package main;
 
+import enemy.EnemyCharacter;
 import hero.Character;
-import java.util.Scanner;
+
 
 
 public class Main {
@@ -15,9 +16,10 @@ public class Main {
 //String str = sc.nextLine();
 //System.out.println("Vous avez tapez : " + str);
 
-final Character character = new Character();
-
-character.start();
+		final Character character = new Character();
+		final EnemyCharacter enemyCharacter = new EnemyCharacter();
+			character.start();
+			enemyCharacter.start2();
 
 	}
 

@@ -1,10 +1,10 @@
-package hero;
+package enemy;
 
-public class Damager extends Character {
+public class EnemyDamager extends EnemyCharacter {
 
 	
-	public int Dam(){
-		System.out.println("Hero : Damager");
+	public int EnDam(){
+		System.out.println("Enemy : Damager");
 		this.lifePoint();
 		this.attack();
 		return 0;

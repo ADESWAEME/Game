@@ -1,44 +1,48 @@
-package hero;
+package enemy;
+
+import enemy.EnemyDamager;
+import enemy.EnemyHealer;
+import enemy.EnemyTank;
+
 
 import java.util.Scanner;
 
-public class Character {
+public class EnemyCharacter {
 
-	
-	
-	public int start(){
-   
+	public int start2(){
+		   
+		  
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
-System.out.println("Choose your character :");
-System.out.println("1 : Dameger");
-System.out.println("2 : Healer");
-System.out.println("3 : Tank");
+System.out.println("Choose your enemy :");
+System.out.println("1 : Enemy Damager");
+System.out.println("2 : Enemy Healer");
+System.out.println("3 : Enemy Tank");
 int str = Integer.parseInt(sc.nextLine());
 System.out.println("Your choosen : " + str);
 		
-		Damager d = new Damager();
-		Healer h = new Healer();
-		Tank t = new Tank();
+
 		int order;
-	
+		EnemyDamager eD = new EnemyDamager();
+		EnemyHealer eH = new EnemyHealer();
+		EnemyTank eT = new EnemyTank();
 	switch (str){
 	
 		case 1:
-			order = d.Dam();
+			order = eD.EnDam();
 				break;
 		case 2:
-			order = h.Heal();
+			order = eH.EnHeal();
 				break;
 		case 3 :
-			order = t.Tan();
+			order = eT.EnTan();
 			
 		default :
 			order = 1;
 			break;
 	}
 	return order;
-	
+
 	}
 	//method lifePoint
 	public void lifePoint(){
@@ -54,5 +58,4 @@ System.out.println("Your choosen : " + str);
 	public void specialPower(){
 		
 	};
-	
 }

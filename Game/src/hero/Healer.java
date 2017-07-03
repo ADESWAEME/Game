@@ -2,11 +2,14 @@ package hero;
 
 public class Healer extends Character {
 
+
+	
 	public int Heal(){
 		System.out.println("Hero : Healer");
 		this.lifePoint();
 		this.attack();
 		return 0;
+		
 		
 	}
 	@Override
@@ -22,6 +25,7 @@ public class Healer extends Character {
 		int attack = 1;
 		System.out.println("Attack : " + attack);
 	}
+	
 
 //	@Override
 //	public void specialPower() {
