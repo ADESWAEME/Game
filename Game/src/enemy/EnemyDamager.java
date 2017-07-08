@@ -5,6 +5,7 @@ public class EnemyDamager extends EnemyCharacter {
 	int lifePoint;
 	int attack;
 	
+
 	public int EnDam(){
 		System.out.println("Enemy : Damager");
 		System.out.println("");
@@ -14,16 +15,14 @@ public class EnemyDamager extends EnemyCharacter {
 		
 	}
 	@Override
-	public void lifePoint() {
-		// TODO Auto-generated method stub
-		lifePoint = 3;
+	public int lifePoint() {
+		return lifePoint = 3;
 		
 	}
 
 	@Override
-	public void attack() {
-		// TODO Auto-generated method stub
-		attack = 2;
+	public int attack() {
+		return attack = 2;
 		
 	}
 
@@ -34,6 +33,7 @@ public class EnemyDamager extends EnemyCharacter {
 //	}
 
 	public int lvlDamager(){
+		
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 	System.out.println("Choose lvl of your Enemy :");
@@ -44,30 +44,34 @@ public class EnemyDamager extends EnemyCharacter {
 	System.out.println("Your choosen : " + str);
 	System.out.println("");
 		
-		int order; 
+		int order;
+		int order1;
 		
 	switch (str){
 	
 		case 1:
-			order = lifePoint;
+			order = this.lifePoint() -1;
+			order1 = this.attack() - 1;
 			System.out.println(" Your enemy is : ");
 			System.out.println("Damager");
 			System.out.println("Life point : " + order);
-			System.out.println("Attack : " + attack);
+			System.out.println("Attack : " + order1);
 				break;
 		case 2:
-			order = lifePoint + 2 ;
+			order = this.lifePoint() ;
+			order1 = this.attack();
 			System.out.println(" Your enemy is : ");
 			System.out.println("Damager");
 			System.out.println("Life point : " + order);
-			System.out.println("Attack : " + attack);
+			System.out.println("Attack : " + order1);
 				break;
 		case 3 :
-			order = lifePoint + 4;
+			order = this.lifePoint() + 4;
+			order1 = this.attack() + 2;
 			System.out.println(" Your enemy is : ");
 			System.out.println("Damager");
 			System.out.println("Life point : " + order);
-			System.out.println("Attack : " + attack);
+			System.out.println("Attack : " + this.attack());
 				break;
 		default :
 			order = 1;
@@ -76,5 +80,6 @@ public class EnemyDamager extends EnemyCharacter {
 	return order;
 	
 	}
+
 	
 }

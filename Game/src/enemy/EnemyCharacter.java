@@ -54,18 +54,22 @@ System.out.println("");
 	
 	}
 	//method lifePoint
-	public void lifePoint(){
+	public int lifePoint(){
+		return 0;
 		
 	};
 	
 	//method attack
-	public void attack(){
+	public int attack(){
+		return 0;
 		
 	};
 	
 	//method specialPower
-	public void specialPower(){
+	public int specialPower(){
+		return 0;
 		
 	}
+
 
 }
