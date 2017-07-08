@@ -11,7 +11,8 @@ public class EnemyCharacter {
 
 	public int start2(){
 		   
-		  
+
+		
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 System.out.println("Choose your enemy :");
@@ -20,16 +21,22 @@ System.out.println("2 : Enemy Healer");
 System.out.println("3 : Enemy Tank");
 int str = Integer.parseInt(sc.nextLine());
 System.out.println("Your choosen : " + str);
+System.out.println("");
 		
 
 		int order;
+		
 		EnemyDamager eD = new EnemyDamager();
 		EnemyHealer eH = new EnemyHealer();
 		EnemyTank eT = new EnemyTank();
+		
+		//eD.lvlDamager();
+		
 	switch (str){
 	
 		case 1:
 			order = eD.EnDam();
+		
 				break;
 		case 2:
 			order = eH.EnHeal();
@@ -43,6 +50,8 @@ System.out.println("Your choosen : " + str);
 	}
 	return order;
 
+	
+	
 	}
 	//method lifePoint
 	public void lifePoint(){
@@ -57,5 +66,6 @@ System.out.println("Your choosen : " + str);
 	//method specialPower
 	public void specialPower(){
 		
-	};
+	}
+
 }

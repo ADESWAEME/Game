@@ -20,6 +20,7 @@ public class Main {
 		final EnemyCharacter enemyCharacter = new EnemyCharacter();
 			character.start();
 			enemyCharacter.start2();
+			
 
 	}
 

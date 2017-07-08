@@ -23,6 +23,7 @@ public class Damager extends Character {
 		// TODO Auto-generated method stub
 		int attack = 2;
 		System.out.println("Attack : " + attack);
+		System.out.println(" ");
 	}
 
 //	@Override

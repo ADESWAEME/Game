@@ -24,6 +24,7 @@ public class Healer extends Character {
 		// TODO Auto-generated method stub
 		int attack = 1;
 		System.out.println("Attack : " + attack);
+		System.out.println(" ");
 	}
 	
 
