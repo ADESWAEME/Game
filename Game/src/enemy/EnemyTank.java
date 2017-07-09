@@ -58,6 +58,7 @@ public class EnemyTank extends EnemyCharacter{
 			System.out.println("Tank");
 			System.out.println("Life point : " + order);
 			System.out.println("Attack : " + order1);
+			System.out.println("");
 				break;
 		case 2:
 			order = this.lifePoint() ;
@@ -66,6 +67,7 @@ public class EnemyTank extends EnemyCharacter{
 			System.out.println("Tank");
 			System.out.println("Life point : " + order);
 			System.out.println("Attack : " + order1);
+			System.out.println("");
 				break;
 		case 3 :
 			order = this.lifePoint() + 4;
@@ -73,7 +75,8 @@ public class EnemyTank extends EnemyCharacter{
 			System.out.println(" Your enemy is : ");
 			System.out.println("Tank");
 			System.out.println("Life point : " + order);
-			System.out.println("Attack : " + this.attack());
+			System.out.println("Attack : " + order1);
+			System.out.println("");
 				break;
 		default :
 			order = 1;

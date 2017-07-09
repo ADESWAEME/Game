@@ -30,7 +30,7 @@ System.out.println("");
 		EnemyHealer eH = new EnemyHealer();
 		EnemyTank eT = new EnemyTank();
 		
-		//eD.lvlDamager();
+		
 		
 	switch (str){
 	
