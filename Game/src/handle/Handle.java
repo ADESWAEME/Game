@@ -23,32 +23,34 @@ public class Handle {
 		int action;
 		
 		final Damager dam = new Damager();
-		final Healer heal = new Healer();
-		final Tank tan = new Tank();
+//		final Healer heal = new Healer();
+//		final Tank tan = new Tank();
 		
 		final EnemyDamager enDam = new EnemyDamager();
 	
-		int lifeDam = Integer.parseInt(dam.getLifePointDam());
-		int attackDam = Integer.parseInt(dam.getAttackDam());
-		int specialPowerDam = Integer.parseInt(dam.getSpacialPowerDam());
+		int lifeDam = dam.getLifePoint();
+		int attackDam = dam.getAttack();
+		int specialPowerDam = dam.getSpecialPower();
 		
-		int lifeHeal = Integer.parseInt(heal.getLifePointHeal());
-		int attackHeal = Integer.parseInt(heal.getAttackHeal());
-		int specialPowerHeal = Integer.parseInt(heal.getSpecialPowerHeal());
+//		int lifeHeal = heal.getLifePoint();
+//		int attackHeal = heal.getAttack();
+//		int specialPowerHeal = heal.getSpecialPower();
+//		
+//		int lifeTan = tan.getLifePoint();
+//		int attackTan = tan.getAttack();
+//		int specialPowerTan = tan.getSpecialPower();
 		
-		int lifeTan = Integer.parseInt(tan.getLifePointTan());
-		int attackTan = Integer.parseInt(tan.getAttackTan());
-		int specialPowerTan = Integer.parseInt(tan.getSpecialPowerTan());
-		
-		int lifeEnDam = Integer.parseInt(enDam.getLifePointEnDam());
-		int attackEnDam = Integer.parseInt(enDam.getAttackEnDam());
-		int specialPowerEnDam = Integer.parseInt(enDam.getSpecialPowerEnDam());
+		int lifeEnDam = enDam.setLifePoint(i);
+		int attackEnDam = enDam.getAttack();
+		int specialPowerEnDam = enDam.getSpecialPower();
 		
 		
-		if(lifeDam == 0){
-			System.out.println("Handle"+ " " + i);
+		if (lifeDam <= 0){
 			System.out.println("Game over");
-				return i;
+		}
+		
+		if (lifeEnDam <= 0){
+			System.out.println("Succeed !");
 		}
 		
 		while(lifeDam > 0){
@@ -59,6 +61,7 @@ public class Handle {
 			System.out.println("2 : Special Power");
 			int battle = Integer.parseInt(sc.nextLine());
 			System.out.println("Your choosen : " + battle);
+			
 			
 			switch (battle){
 				case 1 : 
@@ -105,33 +108,11 @@ public class Handle {
 		             break;
 		        }
 			i ++;
-			if (lifeDam == 0){
-				System.out.println("Game over");
-			}
 			
-			if (lifeEnDam == 0){
-				System.out.println("Succeed !");
-			}
 		}
 		
 		return i;
-//		if(lifeHeal == 0){
-//			System.out.println("Handle"+ " " + i);
-//			System.out.println("Game over");
-//			i++;
-//				return i;
-//		}
-//		
-//		while(lifeTan == 0){
-//			System.out.println("Handle" + " " + i);
-//			System.out.println("Game over");
-//			i++;
-//				return i;
-//		}
-//		
-//		return i;
-//		
-//	}
+
 
 	}
 }

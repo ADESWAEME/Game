@@ -70,6 +70,18 @@ System.out.println("");
 		return 0;
 		
 	}
+	public int getLifePoint() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	public int getAttack() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	public int getSpecialPower() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 
 }

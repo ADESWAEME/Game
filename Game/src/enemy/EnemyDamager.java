@@ -1,41 +1,49 @@
 package enemy;
 import java.util.Scanner;
 
-import handle.Handle;
+
 public class EnemyDamager extends EnemyCharacter {
-
-	int lifePoint;
-	int attack;
 	
-	final Handle h = new Handle();
+	private int lifePoint = 3;
+	private int attack =2;
+	private int specialPower;
 
+	
 	public int EnDam(){
 		System.out.println("Enemy : Damager");
-		System.out.println("");
-		this.lvlDamager();
+		System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
 		return 0;
-		
-		
 	}
-	@Override
-	public int lifePoint() {
-		return lifePoint = 3;
-		
-	}
-
-	@Override
-	public int attack() {
-		return attack = 2;
-		
-	}
-
+	
 	@Override
 	public int specialPower() {
-		// TODO Auto-generated method stub
-		int specialPower = 1; //(créer une classe méchant et mettre les dommages que peuvent faire les monstres en méthodes)
-			
-		return specialPower;
+		specialPower = this.attack + 2;
+		return specialPower;	
 	}
+	
+	@Override
+	public int getLifePoint() {
+		return lifePoint;
+	}
+
+	public int setLifePoint(int i){
+		return lifePoint = i;
+	}
+
+	public void setAttack(int i){
+		attack = i;
+	}
+
+	@Override
+	public int getAttack() {
+		return attack;
+	}
+
+	@Override
+	public int getSpecialPower() {
+		return specialPower();
+	}
+
 
 	public int lvlDamager(){
 		
@@ -88,27 +96,5 @@ public class EnemyDamager extends EnemyCharacter {
 	return str;
 	
 	}
-	
-	public String getLifePointEnDam(){
-		String lifePointEnDam = Integer.toString(this.lifePoint());
-		return lifePointEnDam;
-		
-	}
-	
-	public String getAttackEnDam(){
-		String attackEnDam = Integer.toString(this.attack());
-		return attackEnDam;
-		
-	}
-	
-	public String getSpecialPowerEnDam(){
-		String specialPowerEnDam = Integer.toString(this.specialPower());
-		return specialPowerEnDam;
-		
-	}
-	
-	public int setLifePointEnDam(){
-		this.lifePoint();
-		return lifePoint();
-	}
+
 }

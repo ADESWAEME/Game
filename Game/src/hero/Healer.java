@@ -2,61 +2,44 @@ package hero;
 
 public class Healer extends Character {
 
+	private int lifePoint = 4;
+	private int attack = 1;
+	private int specialPower;
 
 	
 	public int Heal(){
 		System.out.println("Hero : Healer");
-		this.lifePoint();
-		System.out.println("Life point : " + this.lifePoint());
-		this.attack();
-		System.out.println("Attack : " + this.attack());
-		System.out.println(" ");
+		System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
 		return 0;
-		
-		
 	}
+	
 	@Override
-	public int lifePoint() {
-		// TODO Auto-generated method stub
-		int lifePoint = 4;
-		
+	public int specialPower() {
+		specialPower = this.attack + 3;
+		return specialPower;	
+	}
+	
+	@Override
+	public int getLifePoint() {
 		return lifePoint;
 	}
 
+	public void setLifePoint(int i){
+		lifePoint = i;
+	}
+
+	public void setAttack(int i){
+		attack = i;
+	}
+
 	@Override
-	public int attack() {
-		// TODO Auto-generated method stub
-		int attack = 1;
+	public int getAttack() {
 		return attack;
-		
-	}
-	
-
-//	@Override
-	public int specialPower() {
-		// TODO Auto-generated method stub
-		int specialPower = this.lifePoint() + 2;
-		return specialPower;
 	}
 
-	public String getLifePointHeal(){
-		
-		String lifePointHeal = Integer.toString(this.lifePoint());
-		return lifePointHeal;
-		
+	@Override
+	public int getSpecialPower() {
+		return specialPower();
 	}
-	
-	public String getAttackHeal(){
-		
-		String attackHeal = Integer.toString(this.attack());
-		return attackHeal;
-		
-	}
-	
-	public String getSpecialPowerHeal(){
-		
-		String specialPowerHeal = Integer.toString(this.specialPower());
-		return specialPowerHeal;
-		
-	}
+
 }

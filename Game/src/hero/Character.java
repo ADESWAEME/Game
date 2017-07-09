@@ -85,6 +85,22 @@ public class Character {
 		
 		return specialPower();
 	}
+
+
+	public int getAttack() {
+		// TODO Auto-generated method stub
+		return getAttack();
+	}
+
+
+	public int getLifePoint() {
+		// TODO Auto-generated method stub
+		return getLifePoint();
+	}
 	
+	public int getSpecialPower() {
+		// TODO Auto-generated method stub
+		return getSpecialPower();
+	}
 
 }
