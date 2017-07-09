@@ -4,38 +4,47 @@ import java.util.Scanner;
 
 public class EnemyHealer extends EnemyCharacter{
 
-	int lifePoint;
-	int attack;
+	private int lifePoint = 4;
+	private int attack = 1;
+	private int specialPower;
+
+	final
 	
 	public int EnHeal(){
-		System.out.println("Enemy : Healer");
-		System.out.println("");
+		System.out.println("Enemy : Damager");
+		//System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
 		this.lvlEnHealer();
 		return 0;
-		
-		
 	}
-	@Override
-	public int lifePoint() {
-		// TODO Auto-generated method stub
-		return lifePoint = 4;
-		
-	}
-
-	@Override
-	public int attack() {
-		// TODO Auto-generated method stub
-		return attack = 1;
-		
-	}
-
 	
+	@Override
+	public int specialPower() {
+		specialPower = this.attack + 2;
+		return specialPower;	
+	}
+	
+	@Override
+	public int getLifePoint() {
+		return lifePoint;
+	}
 
-//	@Override
-//	public void specialPower() {
-//		// TODO Auto-generated method stub
-//		int specialPower = this.lifePoint + 2;
-//	}
+	public int setLifePoint(int i){
+		return lifePoint = i;
+	}
+
+	public int setAttack(int i){
+		return attack = i;
+	}
+
+	@Override
+	public int getAttack() {
+		return attack;
+	}
+
+	@Override
+	public int getSpecialPower() {
+		return specialPower();
+	}	
 	
 	public int lvlEnHealer(){
 		
@@ -55,8 +64,8 @@ public class EnemyHealer extends EnemyCharacter{
 	switch (str){
 	
 		case 1:
-			order = this.lifePoint() -1;
-			order1 = this.attack() - 1;
+			order = lifePoint -1;
+			order1 = attack - 1;
 			System.out.println(" Your enemy is : ");
 			System.out.println("Healer");
 			System.out.println("Life point : " + order);
@@ -64,8 +73,8 @@ public class EnemyHealer extends EnemyCharacter{
 			System.out.println("");
 				break;
 		case 2:
-			order = this.lifePoint() ;
-			order1 = this.attack();
+			order = lifePoint ;
+			order1 = attack;
 			System.out.println(" Your enemy is : ");
 			System.out.println("Healer");
 			System.out.println("Life point : " + order);
@@ -73,8 +82,8 @@ public class EnemyHealer extends EnemyCharacter{
 			System.out.println("");
 				break;
 		case 3 :
-			order = this.lifePoint() + 4;
-			order1 = this.attack() + 2;
+			order = lifePoint + 4;
+			order1 = attack + 2;
 			System.out.println(" Your enemy is : ");
 			System.out.println("Healer");
 			System.out.println("Life point : " + order);

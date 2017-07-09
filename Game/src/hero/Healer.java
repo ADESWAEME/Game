@@ -24,8 +24,8 @@ public class Healer extends Character {
 		return lifePoint;
 	}
 
-	public void setLifePoint(int i){
-		lifePoint = i;
+	public int setLifePoint(int i){
+		return lifePoint = i;
 	}
 
 	public void setAttack(int i){

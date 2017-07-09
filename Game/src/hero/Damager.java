@@ -5,7 +5,9 @@ public class Damager extends Character {
 	private int lifePoint = 3;
 	private int attack = 2;
 	private int specialPower;
-
+	final Character monstre = new Character();
+	private int c;
+	
 	
 	public int Dam(){
 		System.out.println("Hero : Damager");
@@ -24,8 +26,8 @@ public class Damager extends Character {
 		return lifePoint;
 	}
 
-	public void setLifePoint(int i){
-		lifePoint = i;
+	public int setLifePoint(int i){
+		return lifePoint = i;
 	}
 
 	public void setAttack(int i){
@@ -41,5 +43,9 @@ public class Damager extends Character {
 	public int getSpecialPower() {
 		return specialPower();
 	}
-
+	
+	public int getStart(){
+		c = monstre.getStart();
+		return c;
+	}
 }

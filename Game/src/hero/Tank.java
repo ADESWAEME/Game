@@ -24,12 +24,12 @@ public class Tank extends Character{
 		return lifePoint;
 	}
 
-	public void setLifePoint(int i){
-		lifePoint = i;
+	public int setLifePoint(int i){
+		return lifePoint = i;
 	}
 
-	public void setAttack(int i){
-		attack = i;
+	public int setAttack(int i){
+		return attack = i;
 	}
 
 	@Override

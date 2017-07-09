@@ -11,7 +11,8 @@ public class EnemyDamager extends EnemyCharacter {
 	
 	public int EnDam(){
 		System.out.println("Enemy : Damager");
-		System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
+		//System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
+		this.lvlDamager();
 		return 0;
 	}
 	
@@ -63,8 +64,8 @@ public class EnemyDamager extends EnemyCharacter {
 	switch (str){
 	
 		case 1:
-			order = this.lifePoint() -1;
-			order1 = this.attack() - 1;
+			order = lifePoint -1;
+			order1 = attack - 1;
 			System.out.println(" Your enemy is : ");
 			System.out.println("Damager");
 			System.out.println("Life point : " + order);
@@ -72,8 +73,8 @@ public class EnemyDamager extends EnemyCharacter {
 			System.out.println("");
 				break;
 		case 2:
-			order = this.lifePoint() ;
-			order1 = this.attack();
+			order = lifePoint ;
+			order1 = attack;
 			System.out.println(" Your enemy is : ");
 			System.out.println("Damager");
 			System.out.println("Life point : " + order);
@@ -81,8 +82,8 @@ public class EnemyDamager extends EnemyCharacter {
 			System.out.println("");
 				break;
 		case 3 :
-			order = this.lifePoint() + 4;
-			order1 = this.attack() + 2;
+			order = lifePoint + 4;
+			order1 = attack + 2;
 			System.out.println(" Your enemy is : ");
 			System.out.println("Damager");
 			System.out.println("Life point : " + order);
