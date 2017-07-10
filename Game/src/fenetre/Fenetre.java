@@ -63,7 +63,7 @@ public class Fenetre extends JFrame {
 	    fenetre.setTitle("Game");
 	    
 	    //Windows size : 400 pixels large and 100 pixels height
-	    fenetre.setSize(610, 700);
+	    fenetre.setSize(610, 350);
 	    
 	    //location center
 	    fenetre.setLocationRelativeTo(null);
@@ -329,6 +329,8 @@ public class Fenetre extends JFrame {
 			}
 		});
 		
+		JLabel getOut = new JLabel("Out of the game");
+		pan.add(getOut);
 		pan.add(exit);
 		exit.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent event){
