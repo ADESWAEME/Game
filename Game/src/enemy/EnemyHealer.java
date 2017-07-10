@@ -2,6 +2,8 @@ package enemy;
 
 import java.util.Scanner;
 
+
+
 public class EnemyHealer extends EnemyCharacter{
 
 	private int lifePoint = 4;
@@ -15,7 +17,7 @@ public class EnemyHealer extends EnemyCharacter{
 	public int EnHeal(){
 		System.out.println("Enemy : Healer");
 		//System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
-		//this.lvlEnHealer();
+
 		return 0;
 	}
 		
@@ -74,7 +76,6 @@ public class EnemyHealer extends EnemyCharacter{
 	@Override
 	public int getLifePoint() {
 		this.lvlEnHealer();
-		//System.out.println(" point de vie du monstre choisi" + order);
 		return order;
 	}
 	@Override

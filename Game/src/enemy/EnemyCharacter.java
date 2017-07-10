@@ -3,15 +3,17 @@ package enemy;
 import enemy.EnemyDamager;
 import enemy.EnemyHealer;
 import enemy.EnemyTank;
-
+import handle.Handle;
 
 import java.util.Scanner;
 
 public class EnemyCharacter {
 
+
+	
 	public int start2(){
 		   
-
+		
 		
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -25,27 +27,34 @@ public class EnemyCharacter {
 		
 
 		int order;
+		int order1;
 		
 		EnemyDamager eD = new EnemyDamager();
 		EnemyHealer eH = new EnemyHealer();
 		EnemyTank eT = new EnemyTank();
 		
-		
+		final Handle handle= new Handle();
 		
 	switch (str){
 	
 		case 1:
 			order = eD.EnDam();
-	
+			order1 = handle.handle();
+			
 				break;
 		case 2:
 			order = eH.EnHeal();
+			order1 = handle.damAgainstHealer();
+			
 				break;
 		case 3 :
 			order = eT.EnTan();
+			order1 = handle.damAgainstTank();
+			
 			
 		default :
-			order = 1;
+			order = eD.EnDam();
+//			order1 = handle.handle();
 			break;
 	}
 	return order;

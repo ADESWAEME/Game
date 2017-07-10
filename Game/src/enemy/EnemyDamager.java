@@ -2,6 +2,7 @@ package enemy;
 import java.util.Scanner;
 
 
+
 public class EnemyDamager extends EnemyCharacter {
 	
 	private int lifePoint = 3;
@@ -12,8 +13,8 @@ public class EnemyDamager extends EnemyCharacter {
 
 	
 	public int EnDam(){
+		
 		System.out.println("Enemy : Damager");
-		//System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
 		
 		return 0;
 	}
@@ -29,9 +30,7 @@ public class EnemyDamager extends EnemyCharacter {
 	int str = Integer.parseInt(sc.nextLine());
 	System.out.println("Your choosen : " + str);
 	System.out.println("");
-		
-		
-		
+				
 	switch (str){
 	
 		case 1:
@@ -67,15 +66,14 @@ public class EnemyDamager extends EnemyCharacter {
 			order1 = attack;
 			break;
 	}
-	
+
 	return str;
 	
 	}
 	
 	@Override
 	public int getLifePoint() {
-		//this.lvlDamager();
-	//	System.out.println(" point de vie du monstre choisi" + order);
+		this.lvlDamager();
 		return order;
 	}
 	@Override

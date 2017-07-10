@@ -14,12 +14,11 @@ public class Main {
 
 		final Character character = new Character();
 		final EnemyCharacter enemyCharacter = new EnemyCharacter();
-		final Handle handle= new Handle();
+//		final Handle h = new Handle();
 		
 			character.start();
 			enemyCharacter.start2();
-			handle.handle();
-			
+			//h.handle();
 
 	}
 

@@ -2,6 +2,8 @@ package enemy;
 
 import java.util.Scanner;
 
+import handle.Handle;
+
 public class EnemyTank extends EnemyCharacter{
 
 	private int lifePoint = 5;
@@ -14,7 +16,7 @@ public class EnemyTank extends EnemyCharacter{
 	public int EnTan(){
 		System.out.println("Enemy : Tank");
 		//System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
-		this.lvlEnTank();
+
 		return 0;
 	}
 	
@@ -72,8 +74,7 @@ public class EnemyTank extends EnemyCharacter{
 
 	@Override
 	public int getLifePoint() {
-		
-		//System.out.println(" point de vie du monstre choisi" + order);
+		this.lvlEnTank();
 		return order;
 	}
 	@Override
