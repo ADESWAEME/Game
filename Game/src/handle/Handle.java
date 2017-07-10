@@ -14,7 +14,8 @@ import hero.Tank;
 public class Handle{
 
 
-	
+	int equationBloquer;
+	int iA = 4 ;
 	
 	public int handle(){
 		
@@ -34,6 +35,7 @@ public class Handle{
 		int attackDam = dam.getAttack();
 		int setAttackDam = dam.setAttack(attackDam);
 		int specialPowerDam = dam.getSpecialPower();
+		
 	
 		int lifeEnDam = enDam.getLifePoint();
 		int setLifeEnDam = enDam.setLifePoint(lifeEnDam);
@@ -41,8 +43,11 @@ public class Handle{
 		int setAttackEnDam = enDam.setAttack(attackEnDam);
 		int specialPowerEnDam = enDam.getSpecialPower();
 	
-
-	 	
+//		int bloquerDam;
+//		int bloquerEnDam;
+		
+	
+		
 		while(lifeEnDam > 0){
 			System.out.println("\n >Handle"+ " " + i + "<");
 			System.out.println("");
@@ -53,6 +58,7 @@ public class Handle{
 			System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
 			System.out.println("1 : Attack");
 			System.out.println("2 : Special Power");
+			System.out.println("3 : Bloquer");
 			int battle = Integer.parseInt(sc.nextLine());
 			System.out.println("Your choosen : " + battle);
 
@@ -60,12 +66,11 @@ public class Handle{
 			
 			switch (battle){
 				case 1 : 
-					 
-					 System.out.println("Life Point enemy : " + setLifeEnDam);
+					 System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
 					 System.out.print("You attack :");
 					 System.out.println( - attackDam);
 					 actionLife = setLifeEnDam - attackDam;
-					 System.out.println("Life IA : " + actionLife);
+					 System.out.println("Life IA Damager: " + actionLife);
 					 System.out.println("");
 					 setLifeEnDam = actionLife;
 					
@@ -79,6 +84,19 @@ public class Handle{
 					System.out.println("");
 					setAttackDam = actionAttack;
 						break;
+						
+				case 3 :
+					if (iA == 0){
+						System.out.println("Hero Damager stoped attack of the hero Damger !");
+						System.out.println("Life Hero Damager : " + setLifeDam);
+						setLifeDam = setLifeDam + setAttackEnDam;
+						System.out.println("Life Hero Damager recovery : " + setLifeDam);
+						equationBloquer =  actionIAAttack - actionIAAttack + 1;
+						System.out.println("Lost point :" + equationBloquer);
+						setLifeDam = setLifeDam - equationBloquer;
+						System.out.println("Life Hero Damager after Stopted the attack : " + setLifeDam);
+					}
+					break;
 				
 				default : 
 					battle = 1;
@@ -98,33 +116,44 @@ public class Handle{
 			System.out.println("** Turn of IA **");
 			
 		       Random coin = new Random();
-		        int iA;
-		        iA = coin.nextInt(2);
+		        
+		        iA = coin.nextInt(3);
 		        switch(iA){
 		            case 0 : 
-		           	 System.out.println("Life Point hero : " + setLifeDam);
+		             System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackEnDam);
 					 System.out.print("IA attacks :");
 					 System.out.println( - attackEnDam);
 					 actionIALife = setLifeDam - attackEnDam;
 					 System.out.println(actionIALife);
 					 System.out.println(" ");
-					 System.out.println("Life Hero : " + actionIALife);
-					 System.out.println("Life IA : " + actionLife);
+					 System.out.println("Life Hero Damager : " + actionIALife);
+					 System.out.println("Life IA Damager: " + actionLife);
 					 System.out.println(" ");
 					 setLifeDam = actionIALife;
 					 setLifeEnDam = actionLife;
 					 	break;
 		            case 1 : 
 		            	System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackEnDam);
-						System.out.println("You become strong");
+						System.out.println("IA Damager becomes strong");
 						System.out.println( "+ attack :  "+ specialPowerDam);
 						actionIAAttack = setAttackEnDam + specialPowerEnDam;
 						System.out.println("Life Point :" + setLifeEnDam + " " + "Attack : " + actionIAAttack);
 						System.out.println("");
 						setAttackEnDam = actionIAAttack;
-				
-		             break;
-		             
+							break;
+		            case 2 :
+							if (battle == 1){
+								System.out.println("IA Damager stoped attack of the hero Damger !");
+								System.out.println("Life IA Damager : " + setLifeEnDam);
+								setLifeEnDam = setLifeEnDam + setAttackDam;
+								System.out.println("Life IA Damager recovery : " + setLifeEnDam);
+								equationBloquer =  actionAttack - actionAttack + 1;
+								System.out.println("Lost point :" + equationBloquer);
+								setLifeEnDam = setLifeEnDam - equationBloquer;
+								System.out.println("Life IA Damager after Stopted the attack : " + setLifeEnDam);
+							}
+							break;
+							
 		            default :
 		            	iA = 1;
 		            	break;
@@ -179,6 +208,7 @@ public class Handle{
 			System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
 			System.out.println("1 : Attack");
 			System.out.println("2 : Special Power");
+			System.out.println("3 : Bloquer");
 			int battle = Integer.parseInt(sc.nextLine());
 			System.out.println("Your choosen : " + battle);
 
@@ -186,14 +216,13 @@ public class Handle{
 			
 			switch (battle){
 				case 1 : 
-					System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
-					 System.out.println("Life Point enemy : " + setLifeEnHeal);
+					 System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
 					 System.out.print("You attack :");
 					 System.out.println( - setAttackDam);
 					 actionLife = setLifeEnHeal - setAttackDam;
 					 System.out.println("Life IA : " + actionLife);
 					 System.out.println("");
-					 System.out.println("PDV hero : " + setLifeDam);
+					 System.out.println("Life hero : " + setLifeDam);
 					 setLifeEnHeal = actionLife;
 					
 					 	break;
@@ -208,6 +237,19 @@ public class Handle{
 					setAttackDam = actionAttack;
 						break;					
 				
+				case 3 :
+					if (iA == 0){
+						System.out.println("Hero Damager stoped attack of the hero Damger !");
+						System.out.println("Life Hero Damager : " + setLifeDam);
+						setLifeDam = setLifeDam + setAttackEnHeal;
+						System.out.println("Life Hero Damager recovery : " + setLifeDam);
+						equationBloquer =  actionIAAttack - actionIAAttack + 1;
+						System.out.println("Lost point :" + equationBloquer);
+						setLifeDam = setLifeDam - equationBloquer;
+						System.out.println("Life Hero Damager after Stopted the attack : " + setLifeDam);
+					}
+					break;
+						
 				default : 
 					battle = 1;
 						break;
@@ -225,14 +267,13 @@ public class Handle{
 
 			System.out.println("** Turn of IA **");
 			System.out.println("");
-			System.out.println("Life Point IA Tank:" + setLifeEnHeal + " " + "Attack IA Tank: " + actionIAAttack);
+			System.out.println("Life Point IA :" + setLifeEnHeal + " " + "Attack IA : " + actionIAAttack);
 			
 		       Random coin = new Random();
 		        int iA;
-		        iA = coin.nextInt(2);
+		        iA = coin.nextInt(3);
 		        switch(iA){
 		            case 0 : 
-		           	 System.out.println("Life Point hero : " + setLifeDam);
 					 System.out.print("IA attacks :");
 					 System.out.println( - attackEnHeal);
 					 actionIALife = setLifeDam - attackEnHeal;
@@ -247,11 +288,24 @@ public class Handle{
 		               	System.out.println("IA Tank become strong");
 						System.out.println( "+ attack :  "+ specialPowerEnHeal);
 						actionIAAttack = setAttackEnHeal + specialPowerEnHeal;
-						System.out.println("Life Point IA Tank:" + setLifeEnHeal + " " + "Attack IA Tank: " + actionIAAttack);
+						System.out.println("Life Point IA :" + setLifeEnHeal + " " + "Attack IA : " + actionIAAttack);
 						System.out.println("");
 						setAttackEnHeal = actionIAAttack;			
 								break;
 		             
+		            case 2 :
+		            	if (battle == 1){
+							System.out.println("IA Damager stoped attack of the hero Damger !");
+							System.out.println("Life IA Damager : " + setLifeEnHeal);
+							setLifeEnHeal = setLifeEnHeal + setAttackDam;
+							System.out.println("Life IA Damager recovery : " + setLifeEnHeal);
+							equationBloquer =  actionAttack - actionAttack + 1;
+							System.out.println("Lost point :" + equationBloquer);
+							setLifeEnHeal = setLifeEnHeal - equationBloquer;
+							System.out.println("Life IA Damager after Stopted the attack : " + setLifeEnHeal);
+						}
+						break;
+							
 		            default :
 		            	iA = 1;
 		        }
@@ -306,6 +360,7 @@ public class Handle{
 						System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
 						System.out.println("1 : Attack");
 						System.out.println("2 : Special Power");
+						System.out.println("3 : Bloquer");
 						int battle = Integer.parseInt(sc.nextLine());
 						System.out.println("Your choosen : " + battle);
 			
@@ -313,7 +368,6 @@ public class Handle{
 						
 						switch (battle){
 							case 1 : 
-								System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
 								 System.out.println("Life Point enemy : " + setLifeEnTan);
 								 System.out.print("You attack :");
 								 System.out.println( - setAttackDam);
@@ -325,8 +379,6 @@ public class Handle{
 								
 								 	break;
 							case 2 : 
-								
-								System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
 								System.out.println("You become strong");
 								System.out.println( "+ attack :  "+ specialPowerDam);
 								actionAttack = setAttackDam + specialPowerDam;
@@ -334,7 +386,18 @@ public class Handle{
 								System.out.println("");
 								setAttackDam = actionAttack;
 									break;					
-							
+							case 3 :
+								if (iA == 0){
+									System.out.println("Hero Damager stoped attack of the hero Damger !");
+									System.out.println("Life Hero Damager : " + setLifeDam);
+									setLifeDam = setLifeDam + setAttackEnTan;
+									System.out.println("Life Hero Damager recovery : " + setLifeDam);
+									equationBloquer =  actionIAAttack - actionIAAttack + 1;
+									System.out.println("Lost point :" + equationBloquer);
+									setLifeDam = setLifeDam - equationBloquer;
+									System.out.println("Life Hero Damager after Stopted the attack : " + setLifeDam);
+								}
+								break;
 							default : 
 								battle = 1;
 									break;
@@ -352,10 +415,10 @@ public class Handle{
 			
 						System.out.println("** Turn of IA **");
 						System.out.println("");
-						System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
+						System.out.println("Life Point IA :" + setLifeEnTan + " " + "Attack IA : " + actionIAAttack);
 					       Random coin = new Random();
 					        int iA;
-					        iA = coin.nextInt(2);
+					        iA = coin.nextInt(3);
 					        switch(iA){
 					            case 0 : 
 					           	 System.out.println("Life Point hero : " + setLifeDam);
@@ -373,12 +436,25 @@ public class Handle{
 					            	System.out.println("IA Tank become strong");
 									System.out.println( "+ attack :  "+ specialPowerEnTan);
 									actionIAAttack = setAttackEnTan + specialPowerEnTan;
-									System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
+									System.out.println("Life Point IA :" + setLifeEnTan + " " + "Attack IA : " + actionIAAttack);
 									System.out.println("");
 									setAttackEnTan = actionIAAttack;
 							
 					             break;
-					             
+					            
+					            case 2 :
+					         	if (battle == 1){
+									System.out.println("IA Tank stoped attack of the hero Damger !");
+									System.out.println("Life IA Tank : " + setLifeEnTan);
+									setLifeEnTan = setLifeEnTan + setAttackDam;
+									System.out.println("Life IA Tank recovery : " + setLifeEnTan);
+									equationBloquer =  actionAttack - actionAttack + 1;
+									System.out.println("Lost point :" + equationBloquer);
+									setLifeEnTan = setLifeEnTan - equationBloquer;
+									System.out.println("Life IA Tank after Stopted the attack : " + setLifeEnTan);
+								}
+					         		break;
+					         		
 					            default :
 					            	iA = 1;
 					        }
@@ -436,6 +512,7 @@ public class Handle{
 			System.out.println("Life Point :" + setLifeHeal + " " + "Attack : " + setAttackHeal);
 			System.out.println("1 : Attack");
 			System.out.println("2 : Special Power");
+			System.out.println("3 : Bloquer");
 			int battle = Integer.parseInt(sc.nextLine());
 			System.out.println("Your choosen : " + battle);
 			
@@ -458,7 +535,19 @@ public class Handle{
 					System.out.println("");
 					setAttackHeal = actionAttack;
 						break;
-				
+				case 3 :
+					if (iA == 0){
+						System.out.println("Hero Damager stoped attack of the hero Damger !");
+						System.out.println("Life Hero Damager : " + setLifeHeal);
+						setLifeHeal = setLifeHeal + setAttackEnDam;
+						System.out.println("Life Hero Damager recovery : " + setLifeHeal);
+						equationBloquer =  actionIAAttack - actionIAAttack + 1;
+						System.out.println("Lost point :" + equationBloquer);
+						setLifeHeal = setLifeHeal - equationBloquer;
+						System.out.println("Life Hero Damager after Stopted the attack : " + setLifeHeal);
+					}
+					break;
+						
 				default : 
 					battle = 1;
 					break;
@@ -475,13 +564,14 @@ public class Handle{
 			}
 
 			System.out.println("** Turn of IA **");
-			
+			System.out.println("");
+			System.out.println("Life Point IA :" + setLifeEnDam + " " + "Attack IA : " + actionIAAttack);
+		
 		       Random coin = new Random();
 		        int iA;
-		        iA = coin.nextInt(2);
+		        iA = coin.nextInt(3);
 		        switch(iA){
 		            case 0 : 
-		           	 System.out.println("Life Point hero : " + setLifeHeal);
 					 System.out.print("IA attacks :");
 					 System.out.println( - attackEnDam);
 					 actionIALife = setLifeHeal - attackEnDam;
@@ -494,15 +584,27 @@ public class Handle{
 					 setLifeEnDam = actionLife;
 					 	break;
 		            case 1 : 
-		            	System.out.println("Life Point :" + setLifeEnDam + " " + "Attack : " + setAttackEnDam);
-						System.out.println("You become strong");
+		            	System.out.println("Life IA :" + setLifeEnDam + " " + "Attack IA: " + setAttackEnDam);
+						System.out.println("IA becomes strong");
 						System.out.println( "+ attack :  "+ specialPowerEnDam);
 						actionIAAttack = setAttackEnDam + specialPowerEnDam;
-						System.out.println("Life Point :" + setLifeEnDam + " " + "Attack : " + actionAttack);
+						System.out.println("Life IA :" + setLifeEnDam + " " + "Attack IA: " + actionAttack);
 						System.out.println("");
 						setAttackEnDam = actionIAAttack;
 				
 		             break;
+		            case 2 :
+		         	if (battle == 1){
+						System.out.println("IA Healer stoped attack of the hero Damger !");
+						System.out.println("Life IA Healer : " + setLifeEnDam);
+						setLifeEnDam = setLifeEnDam + setAttackHeal;
+						System.out.println("Life IA Healer recovery : " + setLifeEnDam);
+						equationBloquer =  actionAttack - actionAttack + 1;
+						System.out.println("Lost point :" + equationBloquer);
+						setLifeEnDam = setLifeEnDam - equationBloquer;
+						System.out.println("Life IA Healer after Stopted the attack : " + setLifeEnDam);
+					}
+					break;
 		             
 		            default :
 		            	iA = 1;
@@ -561,6 +663,7 @@ public class Handle{
 			System.out.println("Life Point :" + setLifeHeal + " " + "Attack : " + setAttackHeal);
 			System.out.println("1 : Attack");
 			System.out.println("2 : Special Power");
+			System.out.println("3 : Bloquer");
 			int battle = Integer.parseInt(sc.nextLine());
 			System.out.println("Your choosen : " + battle);
 
@@ -580,11 +683,24 @@ public class Handle{
 				System.out.println("You become strong");
 				System.out.println( "+ attack :  "+ specialPowerHeal);
 				actionAttack = setAttackHeal + specialPowerHeal;
-				System.out.println("Life Point :" + setLifeHeal + " " + "Attack : " + actionAttack);
+				System.out.println("Life Hero :" + setLifeHeal + " " + "Attack : " + actionAttack);
 				System.out.println("");
 				setAttackHeal = actionAttack;
 					break;			
 				
+			case 3 :
+				if (iA == 0){
+					System.out.println("Hero Damager stoped attack of the hero Damger !");
+					System.out.println("Life Hero Damager : " + setLifeHeal);
+					setLifeHeal = setLifeHeal + setAttackEnHeal;
+					System.out.println("Life Hero Damager recovery : " + setLifeHeal);
+					equationBloquer =  actionIAAttack - actionIAAttack + 1;
+					System.out.println("Lost point :" + equationBloquer);
+					setLifeHeal = setLifeHeal - equationBloquer;
+					System.out.println("Life Hero Damager after Stopted the attack : " + setLifeHeal);
+				}
+				break;
+					
 				default : 
 					battle = 1;
 						break;
@@ -601,13 +717,14 @@ public class Handle{
 			}
 
 			System.out.println("** Turn of IA **");
-			
+			System.out.println("");
+			System.out.println("Life Point IA :" + setLifeEnHeal + " " + "Attack IA : " + actionIAAttack);
+		
 		       Random coin = new Random();
 		        int iA;
-		        iA = coin.nextInt(2);
+		        iA = coin.nextInt(3);
 		        switch(iA){
 		            case 0 : 
-		           	 System.out.println("Life Point hero : " + setLifeHeal);
 					 System.out.print("IA attacks :");
 					 System.out.println( - attackEnHeal);
 					 actionIALife = setLifeHeal - attackEnHeal;
@@ -619,16 +736,29 @@ public class Handle{
 					 setLifeEnHeal = actionLife;
 					 	break;
 		            case 1 : 
-		            	System.out.println("Life Point :" + setLifeEnHeal + " " + "Attack : " + setAttackEnHeal);
-						System.out.println("You become strong");
+		            	System.out.println("Life IA :" + setLifeEnHeal + " " + "Attack IA : " + setAttackEnHeal);
+						System.out.println("IA becomes strong");
 						System.out.println( "+ attack :  "+ specialPowerHeal);
 						actionIAAttack = setAttackEnHeal + specialPowerEnHeal;
-						System.out.println("Life Point :" + setLifeHeal + " " + "Attack : " + actionIAAttack);
+						System.out.println("Life IA :" + setLifeHeal + " " + "Attack IA: " + actionIAAttack);
 						System.out.println("");
 						setAttackEnHeal = actionIAAttack;
 				
 		             break;
-		             
+		            
+		            case 2 :
+		            	if (battle == 1){
+							System.out.println("IA  stoped attack of the hero Damger !");
+							System.out.println("Life IA : " + setLifeEnHeal);
+							setLifeEnHeal = setLifeEnHeal + setAttackHeal;
+							System.out.println("Life IA recovery : " + setLifeEnHeal);
+							equationBloquer =  actionAttack - actionAttack + 1;
+							System.out.println("Lost point :" + equationBloquer);
+							setLifeEnHeal = setLifeEnHeal - equationBloquer;
+							System.out.println("Life IA after Stopted the attack : " + setLifeEnHeal);
+						}
+						break;
+		            
 		            default :
 		            	iA = 1;
 		        }
@@ -682,6 +812,7 @@ public class Handle{
 						System.out.println("Life Point :" + setLifeHeal + " " + "Attack : " + setAttackHeal);
 						System.out.println("1 : Attack");
 						System.out.println("2 : Special Power");
+						System.out.println("3 : Bloquer");
 						int battle = Integer.parseInt(sc.nextLine());
 						System.out.println("Your choosen : " + battle);
 			
@@ -705,7 +836,19 @@ public class Handle{
 							System.out.println("");
 							setAttackHeal = actionAttack;
 								break;					
-							
+						case 3 :
+							if (iA == 0){
+								System.out.println("Hero stoped attack of the hero Damger !");
+								System.out.println("Life Hero  : " + setLifeHeal);
+								setLifeHeal = setLifeHeal + setAttackEnTan;
+								System.out.println("Life Hero recovery : " + setLifeHeal);
+								equationBloquer =  actionIAAttack - actionIAAttack + 1;
+								System.out.println("Lost point :" + equationBloquer);
+								setLifeHeal = setLifeHeal - equationBloquer;
+								System.out.println("Life Hero after Stopted the attack : " + setLifeHeal);
+							}
+							break;
+								
 							default : 
 								battle = 1;
 									break;
@@ -723,13 +866,12 @@ public class Handle{
 			
 						System.out.println("** Turn of IA **");
 						System.out.println("");
-						System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
+						System.out.println("Life Point IA :" + setLifeEnTan + " " + "Attack IA : " + actionIAAttack);
 					       Random coin = new Random();
 					        int iA;
-					        iA = coin.nextInt(2);
+					        iA = coin.nextInt(3);
 					        switch(iA){
 					            case 0 : 
-					           	 System.out.println("Life Point hero : " + setLifeHeal);
 								 System.out.print("IA attacks :");
 								 System.out.println( - attackEnTan);
 								 actionIALife = setLifeHeal - attackEnTan;
@@ -741,15 +883,27 @@ public class Handle{
 								 setLifeEnTan = actionLife;
 								 	break;
 					            case 1 : 
-					            	System.out.println("IA Tank become strong");
+					            	System.out.println("IA becomes strong");
 									System.out.println( "+ attack :  "+ specialPowerEnTan);
 									actionIAAttack = setAttackEnTan + specialPowerEnTan;
-									System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
+									System.out.println("Life Point IA:" + setLifeEnTan + " " + "Attack IA : " + actionIAAttack);
 									System.out.println("");
 									setAttackEnTan = actionIAAttack;
 							
 					             break;
 					             
+					            case 2 :
+						         	if (battle == 1){
+										System.out.println("IA stoped attack of the hero Damger !");
+										System.out.println("Life IA : " + setLifeEnTan);
+										setLifeEnTan = setLifeEnTan + setAttackHeal;
+										System.out.println("Life IA recovery : " + setLifeEnTan);
+										equationBloquer =  actionAttack - actionAttack + 1;
+										System.out.println("Lost point :" + equationBloquer);
+										setLifeEnTan = setLifeEnTan - equationBloquer;
+										System.out.println("Life IA after Stopted the attack : " + setLifeEnTan);
+									}
+						         		break;
 					            default :
 					            	iA = 1;
 					        }
@@ -807,6 +961,7 @@ public class Handle{
 			System.out.println("Life Point :" + setLifeTan + " " + "Attack : " + setAttackTan);
 			System.out.println("1 : Attack");
 			System.out.println("2 : Special Power");
+			System.out.println("3 : Bloquer");
 			int battle = Integer.parseInt(sc.nextLine());
 			System.out.println("Your choosen : " + battle);
 			
@@ -829,7 +984,20 @@ public class Handle{
 					System.out.println("");
 					setAttackTan = actionAttack;
 						break;
-				
+			
+				case 3 :
+					if (iA == 0){
+						System.out.println("Hero stoped attack of the hero Damger !");
+						System.out.println("Life Hero : " + setLifeTan);
+						setLifeTan = setLifeTan + setAttackEnDam;
+						System.out.println("Life Hero recovery : " + setLifeTan);
+						equationBloquer =  actionIAAttack - actionIAAttack + 1;
+						System.out.println("Lost point :" + equationBloquer);
+						setLifeTan = setLifeTan - equationBloquer;
+						System.out.println("Life Hero after Stopted the attack : " + setLifeTan);
+					}
+					break;
+						
 				default : 
 					battle = 1;
 					break;
@@ -849,10 +1017,9 @@ public class Handle{
 			
 		       Random coin = new Random();
 		        int iA;
-		        iA = coin.nextInt(2);
+		        iA = coin.nextInt(3);
 		        switch(iA){
 		            case 0 : 
-		           	 System.out.println("Life Point hero : " + setLifeTan);
 					 System.out.print("IA attacks :");
 					 System.out.println( - attackEnDam);
 					 actionIALife = setLifeTan - attackEnDam;
@@ -865,11 +1032,11 @@ public class Handle{
 					 setLifeEnDam = actionLife;
 					 	break;
 		            case 1 : 
-		            	System.out.println("Life Point :" + setLifeEnDam + " " + "Attack : " + setAttackEnDam);
-						System.out.println("You become strong");
+		            	System.out.println("Life IA :" + setLifeEnDam + " " + "Attack : " + setAttackEnDam);
+						System.out.println("IA becomes strong");
 						System.out.println( "+ attack :  "+ specialPowerEnDam);
 						actionIAAttack = setAttackEnDam + specialPowerEnDam;
-						System.out.println("Life Point :" + setLifeEnDam + " " + "Attack : " + actionIAAttack);
+						System.out.println("Life IA :" + setLifeEnDam + " " + "Attack : " + actionIAAttack);
 						System.out.println("");
 						setAttackEnDam = actionIAAttack;
 				
@@ -930,6 +1097,7 @@ public class Handle{
 			System.out.println("Life Point :" + setLifeTan + " " + "Attack : " + setAttackTan);
 			System.out.println("1 : Attack");
 			System.out.println("2 : Special Power");
+			System.out.println("3 : Bloquer");
 			int battle = Integer.parseInt(sc.nextLine());
 			System.out.println("Your choosen : " + battle);
 
@@ -949,11 +1117,22 @@ public class Handle{
 				System.out.println("You become strong");
 				System.out.println( "+ attack :  "+ specialPowerTan);
 				actionAttack = setAttackTan + specialPowerTan;
-				System.out.println("Life Point :" + setLifeTan + " " + "Attack : " + actionAttack);
+				System.out.println("Life Hero :" + setLifeTan + " " + "Attack : " + actionAttack);
 				System.out.println("");
 				setAttackTan = actionAttack;
 					break;			
-				
+			  case 3 :
+					if (iA == 0){
+						System.out.println("Hero  stoped attack of the hero Damger !");
+						System.out.println("Life Hero : " + setLifeTan);
+						setLifeTan = setLifeTan + setAttackEnHeal;
+						System.out.println("Life Hero  recovery : " + setLifeTan);
+						equationBloquer =  actionIAAttack - actionIAAttack + 1;
+						System.out.println("Lost point :" + equationBloquer);
+						setLifeTan = setLifeTan - equationBloquer;
+						System.out.println("Life Hero after Stopted the attack : " + setLifeTan);
+					}
+					break; 
 				default : 
 					battle = 1;
 						break;
@@ -970,13 +1149,14 @@ public class Handle{
 			}
 
 			System.out.println("** Turn of IA **");
-			
+			System.out.println("");
+			System.out.println("Life IA :" + setLifeEnHeal + " " + "Attack IA : " + actionIAAttack);
+		
 		       Random coin = new Random();
 		        int iA;
-		        iA = coin.nextInt(2);
+		        iA = coin.nextInt(3);
 		        switch(iA){
 		            case 0 : 
-		           	 System.out.println("Life Point hero : " + setLifeTan);
 					 System.out.print("IA attacks :");
 					 System.out.println( - attackEnHeal);
 					 actionIALife = setLifeTan - attackEnHeal;
@@ -989,15 +1169,28 @@ public class Handle{
 					 setLifeEnHeal = actionLife;
 					 	break;
 		            case 1 : 
-		            	System.out.println("IA Healer become strong");
+		            	System.out.println("IA becomes strong");
 						System.out.println( "+ attack :  "+ specialPowerEnHeal);
 						actionIAAttack = setAttackEnHeal + specialPowerEnHeal;
-						System.out.println("Life Point IA Tank:" + setLifeEnHeal + " " + "Attack IA Tank: " + actionIAAttack);
+						System.out.println("Life IA :" + setLifeEnHeal + " " + "Attack IA : " + actionIAAttack);
 						System.out.println("");
 						setAttackEnHeal = actionIAAttack;
 				
 		             break;
-		             
+		            
+		            case 2 :
+		            	if (battle == 1){
+							System.out.println("IA stoped attack of the hero Damger !");
+							System.out.println("Life IA  : " + setLifeEnHeal);
+							setLifeEnHeal = setLifeEnHeal + setAttackTan;
+							System.out.println("Life IA recovery : " + setLifeEnHeal);
+							equationBloquer =  actionAttack - actionAttack + 1;
+							System.out.println("Lost point :" + equationBloquer);
+							setLifeEnHeal = setLifeEnHeal - equationBloquer;
+							System.out.println("Life IA  after Stopted the attack : " + setLifeEnHeal);
+						}
+						break;
+		            
 		            default :
 		            	iA = 1;
 		        }
@@ -1051,6 +1244,7 @@ public class Handle{
 						System.out.println("Life Point :" + setLifeTan + " " + "Attack : " + setAttackTan);
 						System.out.println("1 : Attack");
 						System.out.println("2 : Special Power");
+						System.out.println("3 : Bloquer");
 						int battle = Integer.parseInt(sc.nextLine());
 						System.out.println("Your choosen : " + battle);
 			
@@ -1074,7 +1268,18 @@ public class Handle{
 							System.out.println("");
 							setAttackTan = actionAttack;
 								break;					
-							
+						case 3 :
+							if (iA == 0){
+								System.out.println("Hero stoped attack of the hero Damger !");
+								System.out.println("Life Hero  : " + setLifeTan);
+								setLifeTan = setLifeTan + setAttackEnTan;
+								System.out.println("Life Hero recovery : " + setLifeTan);
+								equationBloquer =  actionIAAttack - actionIAAttack + 1;
+								System.out.println("Lost point :" + equationBloquer);
+								setLifeTan = setLifeTan - equationBloquer;
+								System.out.println("Life Hero  after Stopted the attack : " + setLifeTan);
+							}
+							break;	
 							default : 
 								battle = 1;
 									break;
@@ -1092,13 +1297,12 @@ public class Handle{
 			
 						System.out.println("** Turn of IA **");
 						System.out.println("");
-						System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
+						System.out.println("Life Point IA :" + setLifeEnTan + " " + "Attack IA : " + actionIAAttack);
 					       Random coin = new Random();
 					        int iA;
-					        iA = coin.nextInt(2);
+					        iA = coin.nextInt(3);
 					        switch(iA){
 					            case 0 : 
-					           	 System.out.println("Life Point hero : " + setLifeTan);
 								 System.out.print("IA attacks :");
 								 System.out.println( - attackEnTan);
 								 actionIALife = setLifeTan - attackEnTan;
@@ -1110,15 +1314,28 @@ public class Handle{
 								 setLifeEnTan = actionLife;
 								 	break;
 					            case 1 : 
-					            	System.out.println("IA Tank become strong");
+					            	System.out.println("IA becomes strong");
 									System.out.println( "+ attack :  "+ specialPowerEnTan);
 									actionIAAttack = setAttackEnTan + specialPowerEnTan;
-									System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
+									System.out.println("Life Point IA :" + setLifeEnTan + " " + "Attack IA : " + actionIAAttack);
 									System.out.println("");
 									setAttackEnTan = actionIAAttack;
 							
 					             break;
-					             
+					            
+					            case 2 :
+						         	if (battle == 1){
+										System.out.println("IA stoped attack of the hero Damger !");
+										System.out.println("Life IA : " + setLifeEnTan);
+										setLifeEnTan = setLifeEnTan + setAttackTan;
+										System.out.println("Life IA recovery : " + setLifeEnTan);
+										equationBloquer =  actionAttack - actionAttack + 1;
+										System.out.println("Lost point :" + equationBloquer);
+										setLifeEnTan = setLifeEnTan - equationBloquer;
+										System.out.println("Life IA after Stopted the attack : " + setLifeEnTan);
+									}
+						         		break; 
+					            
 					            default :
 					            	iA = 1;
 					        }

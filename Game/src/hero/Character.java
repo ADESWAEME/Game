@@ -53,21 +53,6 @@ public class Character {
 	
 	}
 	
-
-	//method lifePoint
-//	public int lifePoint(){
-//		return lifePoint();
-//
-//	}
-//	
-//	
-//	//method attack
-//	public int attack(){
-//		return attack();
-//		
-//	}
-//	
-
 	public int getAttack() {
 		// TODO Auto-generated method stub
 		return getAttack();
