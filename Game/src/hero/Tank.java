@@ -1,6 +1,6 @@
 package hero;
 
-import enemy.TankEnemyCharacters;
+//import enemy.TankEnemyCharacters;
 
 public class Tank extends Character{
 

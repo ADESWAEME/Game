@@ -1,6 +1,6 @@
 package enemy;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 import handle.Handle;
 
@@ -8,8 +8,8 @@ public class TankEnemyCharacters {
 
 	public int tankEnemyCharacters(int str){
 		
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
+//		@SuppressWarnings("resource")
+//		Scanner sc = new Scanner(System.in);
 		System.out.println("Choose your enemy :");
 		System.out.println("1 : Enemy Damager");
 		System.out.println("2 : Enemy Healer");

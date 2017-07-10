@@ -1,6 +1,6 @@
 package hero;
 
-import enemy.DamagerEnemyCharacters;
+//import enemy.DamagerEnemyCharacters;
 
 
 public class Damager extends Character {

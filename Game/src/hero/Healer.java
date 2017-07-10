@@ -1,7 +1,7 @@
 package hero;
 
 
-import enemy.HealerEnemyCharacters;
+//import enemy.HealerEnemyCharacters;
 
 public class Healer extends Character {
 

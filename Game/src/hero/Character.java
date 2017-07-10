@@ -1,6 +1,6 @@
 package hero;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Character {
 	

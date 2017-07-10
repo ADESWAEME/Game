@@ -2,8 +2,6 @@ package main;
 
 
 import fenetre.Fenetre;
-import hero.Character;
-
 
 
 public class Main {

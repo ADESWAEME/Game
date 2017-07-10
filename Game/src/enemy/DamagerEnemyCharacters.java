@@ -1,6 +1,6 @@
 package enemy;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 import handle.Handle;
 
