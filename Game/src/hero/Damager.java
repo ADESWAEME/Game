@@ -1,5 +1,8 @@
 package hero;
 
+import enemy.DamagerEnemyCharacters;
+
+
 public class Damager extends Character {
 
 	private int lifePoint = 3;
@@ -9,8 +12,12 @@ public class Damager extends Character {
 	
 	
 	public int Dam(){
+		
+		final DamagerEnemyCharacters enemyCharacter = new DamagerEnemyCharacters();
+		
 		System.out.println("Hero : Damager");
 		System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
+		enemyCharacter.damagerEnemyCharacters();
 		return 0;
 	}
 	

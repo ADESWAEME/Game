@@ -1,5 +1,8 @@
 package hero;
 
+
+import enemy.HealerEnemyCharacters;
+
 public class Healer extends Character {
 
 	private int lifePoint = 4;
@@ -8,8 +11,11 @@ public class Healer extends Character {
 
 	
 	public int Heal(){
+		
+		final HealerEnemyCharacters enemyCharacter = new HealerEnemyCharacters();
 		System.out.println("Hero : Healer");
 		System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
+		enemyCharacter.healerEnemyCharacters();
 		return 0;
 	}
 	@Override

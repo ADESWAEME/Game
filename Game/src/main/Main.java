@@ -1,7 +1,5 @@
 package main;
 
-import enemy.EnemyCharacter;
-import handle.Handle;
 import hero.Character;
 
 
@@ -13,13 +11,8 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		final Character character = new Character();
-		final EnemyCharacter enemyCharacter = new EnemyCharacter();
-//		final Handle h = new Handle();
 		
 			character.start();
-			enemyCharacter.start2();
-			//h.handle();
-
 	}
 
 }
