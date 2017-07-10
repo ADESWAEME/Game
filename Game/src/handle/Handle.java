@@ -115,17 +115,13 @@ public class Handle{
 					 setLifeEnDam = actionLife;
 					 	break;
 		            case 1 : 
-		            	System.out.println("IA heal");
-						System.out.println("Life Point IA :" + setLifeEnDam);
-						System.out.println( "Healing : +" + specialPowerEnDam);
-						actionIALife = setLifeEnDam + specialPowerEnDam;
-						System.out.println("Life Point IA :" + actionIALife);
-						 System.out.println(" ");
-						 System.out.println("Life Hero : " + actionLife);
-						 System.out.println("Life IA : " + actionIALife);
-						 System.out.println(" ");
-						 setLifeDam = actionLife;
-						 setLifeEnDam = actionIALife;
+		            	System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackEnDam);
+						System.out.println("You become strong");
+						System.out.println( "+ attack :  "+ specialPowerDam);
+						actionIAAttack = setAttackEnDam + specialPowerEnDam;
+						System.out.println("Life Point :" + setLifeEnDam + " " + "Attack : " + actionIAAttack);
+						System.out.println("");
+						setAttackEnDam = actionIAAttack;
 				
 		             break;
 		             
@@ -498,17 +494,13 @@ public class Handle{
 					 setLifeEnDam = actionLife;
 					 	break;
 		            case 1 : 
-		            	System.out.println("IA heal");
-						System.out.println("Life Point IA :" + setLifeEnDam);
-						System.out.println( "Healing : +" + specialPowerEnDam);
-						actionIALife = setLifeEnDam + specialPowerEnDam;
-						System.out.println("Life Point IA :" + actionIALife);
-						 System.out.println(" ");
-						 System.out.println("Life Hero : " + actionLife);
-						 System.out.println("Life IA : " + actionIALife);
-						 System.out.println(" ");
-						 setLifeHeal = actionLife;
-						 setLifeEnDam = actionIALife;
+		            	System.out.println("Life Point :" + setLifeEnDam + " " + "Attack : " + setAttackEnDam);
+						System.out.println("You become strong");
+						System.out.println( "+ attack :  "+ specialPowerEnDam);
+						actionIAAttack = setAttackEnDam + specialPowerEnDam;
+						System.out.println("Life Point :" + setLifeEnDam + " " + "Attack : " + actionAttack);
+						System.out.println("");
+						setAttackEnDam = actionIAAttack;
 				
 		             break;
 		             
@@ -627,17 +619,13 @@ public class Handle{
 					 setLifeEnHeal = actionLife;
 					 	break;
 		            case 1 : 
-		            	System.out.println("IA heal");
-						System.out.println("Life Point IA :" + setLifeEnHeal);
-						System.out.println( "Healing : +" + specialPowerEnHeal);
-						actionIALife = setLifeEnHeal + specialPowerEnHeal;
-						System.out.println("Life Point IA :" + actionIALife);
-						 System.out.println(" ");
-						 System.out.println("Life Hero : " + actionLife);
-						 System.out.println("Life IA : " + actionIALife);
-						 System.out.println(" ");
-						 setLifeHeal = actionLife;
-						 setLifeEnHeal = actionIALife;
+		            	System.out.println("Life Point :" + setLifeEnHeal + " " + "Attack : " + setAttackEnHeal);
+						System.out.println("You become strong");
+						System.out.println( "+ attack :  "+ specialPowerHeal);
+						actionIAAttack = setAttackEnHeal + specialPowerEnHeal;
+						System.out.println("Life Point :" + setLifeHeal + " " + "Attack : " + actionIAAttack);
+						System.out.println("");
+						setAttackEnHeal = actionIAAttack;
 				
 		             break;
 		             
@@ -877,17 +865,13 @@ public class Handle{
 					 setLifeEnDam = actionLife;
 					 	break;
 		            case 1 : 
-		            	System.out.println("IA Tan");
-						System.out.println("Life Point IA :" + setLifeEnDam);
-						System.out.println( "Taning : +" + specialPowerEnDam);
-						actionIALife = setLifeEnDam + specialPowerEnDam;
-						System.out.println("Life Point IA :" + actionIALife);
-						 System.out.println(" ");
-						 System.out.println("Life Hero : " + actionLife);
-						 System.out.println("Life IA : " + actionIALife);
-						 System.out.println(" ");
-						 setLifeTan = actionLife;
-						 setLifeEnDam = actionIALife;
+		            	System.out.println("Life Point :" + setLifeEnDam + " " + "Attack : " + setAttackEnDam);
+						System.out.println("You become strong");
+						System.out.println( "+ attack :  "+ specialPowerEnDam);
+						actionIAAttack = setAttackEnDam + specialPowerEnDam;
+						System.out.println("Life Point :" + setLifeEnDam + " " + "Attack : " + actionIAAttack);
+						System.out.println("");
+						setAttackEnDam = actionIAAttack;
 				
 		             break;
 		             
