@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Character {
 	
-	Scanner sc = new Scanner(System.in);
-	private int str = Integer.parseInt(sc.nextLine());
+//	Scanner sc = new Scanner(System.in);
+	//private int str = Integer.parseInt(sc.nextLine());
 	
 	public int start(){
 	
@@ -14,12 +14,13 @@ public class Character {
 		Healer h = new Healer();
 		Tank t = new Tank();
 		
-//	@SuppressWarnings("resource")
-	//Scanner sc = new Scanner(System.in);
+	@SuppressWarnings("resource")
+	Scanner sc = new Scanner(System.in);
 	System.out.println("Choose your character :");
 	System.out.println("1 : Dameger");
 	System.out.println("2 : Healer");
 	System.out.println("3 : Tank");
+	int str = Integer.parseInt(sc.nextLine());
 	System.out.println("Your choosen : " + str);
 		
 	int order;
@@ -44,33 +45,28 @@ public class Character {
 		System.out.println("Character doesn't exist, default character :");
 		order = d.Dam();
 	}
-	
+	if (str <= 0){
+		System.out.println("Character doesn't exist, default character :");
+		order = d.Dam();
+	}
 	return order;
 	
 	}
 	
-	public int getStart(){
-		return str;
-	}
+
 	//method lifePoint
-	public int lifePoint(){
-		return lifePoint();
-
-	}
-	
-	
-	//method attack
-	public int attack(){
-		return attack();
-		
-	}
-	
-	//method specialPower
-	public int specialPower(){
-		
-		return specialPower();
-	}
-
+//	public int lifePoint(){
+//		return lifePoint();
+//
+//	}
+//	
+//	
+//	//method attack
+//	public int attack(){
+//		return attack();
+//		
+//	}
+//	
 
 	public int getAttack() {
 		// TODO Auto-generated method stub

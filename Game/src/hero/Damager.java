@@ -4,9 +4,8 @@ public class Damager extends Character {
 
 	private int lifePoint = 3;
 	private int attack = 2;
-	private int specialPower;
-	final Character monstre = new Character();
-	private int c;
+	private int specialPower = attack + 2;
+
 	
 	
 	public int Dam(){
@@ -15,14 +14,15 @@ public class Damager extends Character {
 		return 0;
 	}
 	
-	@Override
-	public int specialPower() {
-		specialPower = this.attack + 2;
-		return specialPower;	
-	}
+//	@Override
+//	public int specialPower() {
+//		specialPower = this.attack + 2;
+//		return specialPower;	
+//	}
 	
 	@Override
 	public int getLifePoint() {
+		System.out.println("PDV hero : " + lifePoint);
 		return lifePoint;
 	}
 
@@ -30,8 +30,8 @@ public class Damager extends Character {
 		return lifePoint = i;
 	}
 
-	public void setAttack(int i){
-		attack = i;
+	public int setAttack(int i){
+		return attack = i;
 	}
 
 	@Override
@@ -41,11 +41,8 @@ public class Damager extends Character {
 
 	@Override
 	public int getSpecialPower() {
-		return specialPower();
+		return specialPower;
 	}
 	
-	public int getStart(){
-		c = monstre.getStart();
-		return c;
-	}
+
 }

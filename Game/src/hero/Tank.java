@@ -4,19 +4,13 @@ public class Tank extends Character{
 
 	private int lifePoint = 5;
 	private int attack = 1;
-	private int specialPower;
+	private int specialPower = attack + 3;
 
 	
 	public int Tan(){
 		System.out.println("Hero : Tank");
 		System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
 		return 0;
-	}
-	
-	@Override
-	public int specialPower() {
-		specialPower = this.attack + 3;
-		return specialPower;	
 	}
 	
 	@Override
@@ -39,7 +33,7 @@ public class Tank extends Character{
 
 	@Override
 	public int getSpecialPower() {
-		return specialPower();
+		return specialPower;
 	}
 	
 }

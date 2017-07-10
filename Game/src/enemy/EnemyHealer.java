@@ -6,7 +6,7 @@ public class EnemyHealer extends EnemyCharacter{
 
 	private int lifePoint = 4;
 	private int attack = 1;
-	private int specialPower;
+	private int specialPower = attack + 2;
 
 	final
 	
@@ -16,35 +16,7 @@ public class EnemyHealer extends EnemyCharacter{
 		this.lvlEnHealer();
 		return 0;
 	}
-	
-	@Override
-	public int specialPower() {
-		specialPower = this.attack + 2;
-		return specialPower;	
-	}
-	
-	@Override
-	public int getLifePoint() {
-		return lifePoint;
-	}
-
-	public int setLifePoint(int i){
-		return lifePoint = i;
-	}
-
-	public int setAttack(int i){
-		return attack = i;
-	}
-
-	@Override
-	public int getAttack() {
-		return attack;
-	}
-
-	@Override
-	public int getSpecialPower() {
-		return specialPower();
-	}	
+		
 	
 	public int lvlEnHealer(){
 		
@@ -96,6 +68,34 @@ public class EnemyHealer extends EnemyCharacter{
 	}
 	return order;
 	
+	}
+	
+	@Override
+	public int getLifePoint() {
+		return lifePoint;
+	}
+
+	public int setLifePoint(int i){
+		return lifePoint = i;
+	}
+
+	public int setAttack(int i){
+		return attack = i;
+	}
+
+	@Override
+	public int getAttack() {
+		return attack;
+	}
+
+	@Override
+	public int getSpecialPower() {
+		return specialPower;
+	}
+	
+	@Override
+	public int setSpecialPower(int i) {
+		return specialPower = i;
 	}
 	
 }

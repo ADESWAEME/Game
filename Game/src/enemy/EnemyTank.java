@@ -6,7 +6,7 @@ public class EnemyTank extends EnemyCharacter{
 
 	private int lifePoint = 5;
 	private int attack = 1;
-	private int specialPower;
+	private int specialPower = attack + 3;
 
 	
 	public int EnTan(){
@@ -14,35 +14,6 @@ public class EnemyTank extends EnemyCharacter{
 		//System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
 		this.lvlEnTank();
 		return 0;
-	}
-	
-	@Override
-	public int specialPower() {
-		specialPower = this.attack + 2;
-		return specialPower;	
-	}
-	
-	@Override
-	public int getLifePoint() {
-		return lifePoint;
-	}
-
-	public int setLifePoint(int i){
-		return lifePoint = i;
-	}
-
-	public int setAttack(int i){
-		return attack = i;
-	}
-
-	@Override
-	public int getAttack() {
-		return attack;
-	}
-
-	@Override
-	public int getSpecialPower() {
-		return specialPower();
 	}
 	
 	
@@ -98,4 +69,31 @@ public class EnemyTank extends EnemyCharacter{
 	
 	}
 
+	@Override
+	public int getLifePoint() {
+		return lifePoint;
+	}
+
+	public int setLifePoint(int i){
+		return lifePoint = i;
+	}
+
+	public int setAttack(int i){
+		return attack = i;
+	}
+
+	@Override
+	public int getAttack() {
+		return attack;
+	}
+
+	@Override
+	public int getSpecialPower() {
+		return specialPower;
+	}
+	
+	@Override
+	public int setSpecialPower(int i) {
+		return specialPower = i;
+	}
 }

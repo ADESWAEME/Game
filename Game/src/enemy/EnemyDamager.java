@@ -5,46 +5,19 @@ import java.util.Scanner;
 public class EnemyDamager extends EnemyCharacter {
 	
 	private int lifePoint = 3;
-	private int attack =2;
-	private int specialPower;
+	private int attack = 2;
+	private int specialPower = attack + 2;
+	private int order;
+	private int order1;
 
 	
 	public int EnDam(){
 		System.out.println("Enemy : Damager");
 		//System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
-		this.lvlDamager();
 		return 0;
 	}
 	
-	@Override
-	public int specialPower() {
-		specialPower = this.attack + 2;
-		return specialPower;	
-	}
 	
-	@Override
-	public int getLifePoint() {
-		return lifePoint;
-	}
-
-	public int setLifePoint(int i){
-		return lifePoint = i;
-	}
-
-	public void setAttack(int i){
-		attack = i;
-	}
-
-	@Override
-	public int getAttack() {
-		return attack;
-	}
-
-	@Override
-	public int getSpecialPower() {
-		return specialPower();
-	}
-
 
 	public int lvlDamager(){
 		
@@ -58,8 +31,7 @@ public class EnemyDamager extends EnemyCharacter {
 	System.out.println("Your choosen : " + str);
 	System.out.println("");
 		
-		int order;
-		int order1;
+		
 		
 	switch (str){
 	
@@ -91,11 +63,46 @@ public class EnemyDamager extends EnemyCharacter {
 			System.out.println("");
 				break;
 		default :
-			order = 1;
+			order = lifePoint ;
+			order1 = attack;
 			break;
 	}
+	
+	System.out.println(" point de vie du monstre choisi" + order);
 	return str;
 	
+	}
+	
+	@Override
+	public int getLifePoint() {
+		this.lvlDamager();
+		System.out.println(" point de vie du monstre choisi" + order);
+		return order;
+	}
+	@Override
+	public int setLifePoint(int i){
+		
+		return order = i;
+	}
+
+	@Override
+	public int setAttack(int i){
+		return order1 = i;
+	}
+
+	@Override
+	public int getAttack() {
+		return order1;
+	}
+
+	@Override
+	public int getSpecialPower() {
+		return specialPower;
+	}
+	
+	@Override
+	public int setSpecialPower(int i) {
+		return specialPower = i;
 	}
 
 }

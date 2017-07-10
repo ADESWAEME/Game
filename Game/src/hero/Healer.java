@@ -4,7 +4,7 @@ public class Healer extends Character {
 
 	private int lifePoint = 4;
 	private int attack = 1;
-	private int specialPower;
+	private int specialPower = attack + 3;
 
 	
 	public int Heal(){
@@ -13,11 +13,7 @@ public class Healer extends Character {
 		return 0;
 	}
 	
-	@Override
-	public int specialPower() {
-		specialPower = this.attack + 3;
-		return specialPower;	
-	}
+	
 	
 	@Override
 	public int getLifePoint() {
@@ -39,7 +35,7 @@ public class Healer extends Character {
 
 	@Override
 	public int getSpecialPower() {
-		return specialPower();
+		return specialPower;
 	}
 
 }

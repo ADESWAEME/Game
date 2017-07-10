@@ -53,35 +53,51 @@ System.out.println("");
 	
 	
 	}
-	//method lifePoint
-	public int lifePoint(){
-		return 0;
-		
-	};
-	
-	//method attack
-	public int attack(){
-		return 0;
-		
-	};
-	
-	//method specialPower
-	public int specialPower(){
-		return 0;
-		
-	}
+//	//method lifePoint
+//	public int lifePoint(){
+//		return 0;
+//		
+//	};
+//	
+//	//method attack
+//	public int attack(){
+//		return 0;
+//		
+//	};
+//	
+//	//method specialPower
+//	public int specialPower(){
+//		return 0;
+//		
+//	}
 	public int getLifePoint() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	public int setLifePoint(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 	public int getAttack() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	public int setAttack(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
 	public int getSpecialPower() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	public int setSpecialPower(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }
