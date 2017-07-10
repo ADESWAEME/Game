@@ -12,9 +12,6 @@ public class Healer extends Character {
 		System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
 		return 0;
 	}
-	
-	
-	
 	@Override
 	public int getLifePoint() {
 		return lifePoint;
@@ -24,8 +21,8 @@ public class Healer extends Character {
 		return lifePoint = i;
 	}
 
-	public void setAttack(int i){
-		attack = i;
+	public int setAttack(int i){
+		return attack = i;
 	}
 
 	@Override
@@ -37,5 +34,6 @@ public class Healer extends Character {
 	public int getSpecialPower() {
 		return specialPower;
 	}
+	
 
 }

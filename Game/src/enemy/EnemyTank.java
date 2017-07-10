@@ -7,6 +7,8 @@ public class EnemyTank extends EnemyCharacter{
 	private int lifePoint = 5;
 	private int attack = 1;
 	private int specialPower = attack + 3;
+	private int order;
+	private int order1;
 
 	
 	public int EnTan(){
@@ -29,8 +31,7 @@ public class EnemyTank extends EnemyCharacter{
 	System.out.println("Your choosen : " + str);
 	System.out.println("");
 		
-		int order;
-		int order1;
+	
 		
 	switch (str){
 	
@@ -71,20 +72,24 @@ public class EnemyTank extends EnemyCharacter{
 
 	@Override
 	public int getLifePoint() {
-		return lifePoint;
+		
+		//System.out.println(" point de vie du monstre choisi" + order);
+		return order;
 	}
-
+	@Override
 	public int setLifePoint(int i){
-		return lifePoint = i;
+		
+		return order = i;
 	}
 
+	@Override
 	public int setAttack(int i){
-		return attack = i;
+		return order1 = i;
 	}
 
 	@Override
 	public int getAttack() {
-		return attack;
+		return order1;
 	}
 
 	@Override

@@ -4,7 +4,7 @@ public class Damager extends Character {
 
 	private int lifePoint = 3;
 	private int attack = 2;
-	private int specialPower = attack + 2;
+	private int specialPower =	4;
 
 	
 	
@@ -14,15 +14,8 @@ public class Damager extends Character {
 		return 0;
 	}
 	
-//	@Override
-//	public int specialPower() {
-//		specialPower = this.attack + 2;
-//		return specialPower;	
-//	}
-	
 	@Override
 	public int getLifePoint() {
-		System.out.println("PDV hero : " + lifePoint);
 		return lifePoint;
 	}
 
@@ -42,6 +35,11 @@ public class Damager extends Character {
 	@Override
 	public int getSpecialPower() {
 		return specialPower;
+	}
+	
+	@Override
+	public int setSpecialPower(int i) {
+		return specialPower = i;
 	}
 	
 

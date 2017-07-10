@@ -15,13 +15,13 @@ public class EnemyCharacter {
 		
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
-System.out.println("Choose your enemy :");
-System.out.println("1 : Enemy Damager");
-System.out.println("2 : Enemy Healer");
-System.out.println("3 : Enemy Tank");
-int str = Integer.parseInt(sc.nextLine());
-System.out.println("Your choosen : " + str);
-System.out.println("");
+		System.out.println("Choose your enemy :");
+		System.out.println("1 : Enemy Damager");
+		System.out.println("2 : Enemy Healer");
+		System.out.println("3 : Enemy Tank");
+		int str = Integer.parseInt(sc.nextLine());
+		System.out.println("Your choosen : " + str);
+		System.out.println("");
 		
 
 		int order;
@@ -36,7 +36,7 @@ System.out.println("");
 	
 		case 1:
 			order = eD.EnDam();
-		
+	
 				break;
 		case 2:
 			order = eH.EnHeal();
@@ -53,23 +53,7 @@ System.out.println("");
 	
 	
 	}
-//	//method lifePoint
-//	public int lifePoint(){
-//		return 0;
-//		
-//	};
-//	
-//	//method attack
-//	public int attack(){
-//		return 0;
-//		
-//	};
-//	
-//	//method specialPower
-//	public int specialPower(){
-//		return 0;
-//		
-//	}
+
 	public int getLifePoint() {
 		// TODO Auto-generated method stub
 		return 0;

@@ -84,4 +84,10 @@ public class Character {
 		return getSpecialPower();
 	}
 
+
+	public int setSpecialPower(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

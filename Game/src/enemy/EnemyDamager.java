@@ -14,15 +14,14 @@ public class EnemyDamager extends EnemyCharacter {
 	public int EnDam(){
 		System.out.println("Enemy : Damager");
 		//System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
+		
 		return 0;
 	}
-	
-	
 
 	public int lvlDamager(){
 		
 		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 	System.out.println("Choose lvl of your Enemy :");
 	System.out.println("1 : Easy");
 	System.out.println("2 : Way");
@@ -61,6 +60,7 @@ public class EnemyDamager extends EnemyCharacter {
 			System.out.println("Life point : " + order);
 			System.out.println("Attack : " + order1);
 			System.out.println("");
+			System.out.println("..");
 				break;
 		default :
 			order = lifePoint ;
@@ -68,20 +68,18 @@ public class EnemyDamager extends EnemyCharacter {
 			break;
 	}
 	
-	System.out.println(" point de vie du monstre choisi" + order);
 	return str;
 	
 	}
 	
 	@Override
 	public int getLifePoint() {
-		this.lvlDamager();
-		System.out.println(" point de vie du monstre choisi" + order);
+		//this.lvlDamager();
+	//	System.out.println(" point de vie du monstre choisi" + order);
 		return order;
 	}
 	@Override
 	public int setLifePoint(int i){
-		
 		return order = i;
 	}
 

@@ -7,13 +7,15 @@ public class EnemyHealer extends EnemyCharacter{
 	private int lifePoint = 4;
 	private int attack = 1;
 	private int specialPower = attack + 2;
+	private int order;
+	private int order1;
 
 	final
 	
 	public int EnHeal(){
-		System.out.println("Enemy : Damager");
+		System.out.println("Enemy : Healer");
 		//System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
-		this.lvlEnHealer();
+		//this.lvlEnHealer();
 		return 0;
 	}
 		
@@ -30,8 +32,7 @@ public class EnemyHealer extends EnemyCharacter{
 	System.out.println("Your choosen : " + str);
 	System.out.println("");
 		
-		int order;
-		int order1;
+		
 		
 	switch (str){
 	
@@ -72,20 +73,24 @@ public class EnemyHealer extends EnemyCharacter{
 	
 	@Override
 	public int getLifePoint() {
-		return lifePoint;
+		this.lvlEnHealer();
+		//System.out.println(" point de vie du monstre choisi" + order);
+		return order;
 	}
-
+	@Override
 	public int setLifePoint(int i){
-		return lifePoint = i;
+		
+		return order = i;
 	}
 
+	@Override
 	public int setAttack(int i){
-		return attack = i;
+		return order1 = i;
 	}
 
 	@Override
 	public int getAttack() {
-		return attack;
+		return order1;
 	}
 
 	@Override
