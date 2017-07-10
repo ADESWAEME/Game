@@ -17,10 +17,11 @@ public class Handle{
 	
 	
 	public int handle(){
+		
 		int actionLife = 1;
 		int actionAttack = 1;
 		int actionIALife = 1;
-	//	int actionIAAttack = 1;
+		int actionIAAttack = 1;
 		int i = 1;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -33,15 +34,13 @@ public class Handle{
 		int attackDam = dam.getAttack();
 		int setAttackDam = dam.setAttack(attackDam);
 		int specialPowerDam = dam.getSpecialPower();
-	//	int setSpecialPowerDam = dam.setSpecialPower(specialPowerDam);
-		
+	
 		int lifeEnDam = enDam.getLifePoint();
 		int setLifeEnDam = enDam.setLifePoint(lifeEnDam);
 		int attackEnDam = enDam.getAttack();
-	//	int setAttackEnDam = enDam.setAttack(attackEnDam);
+		int setAttackEnDam = enDam.setAttack(attackEnDam);
 		int specialPowerEnDam = enDam.getSpecialPower();
-	//	int setSpecialPowerEnDam = enDam.setSpecialPower(specialPowerEnDam);
-		
+	
 
 	 	
 		while(lifeEnDam > 0){
@@ -51,6 +50,7 @@ public class Handle{
 			System.out.println("Life IA : " + setLifeEnDam);
 			System.out.println("");
 			System.out.println("Your turn :");
+			System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
 			System.out.println("1 : Attack");
 			System.out.println("2 : Special Power");
 			int battle = Integer.parseInt(sc.nextLine());
@@ -152,7 +152,7 @@ public class Handle{
 		int actionLife = 1;
 		int actionAttack = 1;
 		int actionIALife = 1;
-	//	int actionIAAttack = 1;
+		int actionIAAttack = 1;
 		int i = 1;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -165,14 +165,12 @@ public class Handle{
 		int attackDam = dam.getAttack();
 		int setAttackDam = dam.setAttack(attackDam);
 		int specialPowerDam = dam.getSpecialPower();
-	//	int setSpecialPowerDam = dam.setSpecialPower(specialPowerDam);
 		
 		int lifeEnHeal = enHeal.getLifePoint();
 		int setLifeEnHeal = enHeal.setLifePoint(lifeEnHeal);
 		int attackEnHeal = enHeal.getAttack();
-	//	int setAttackEnHeal = enHeal.setAttack(attackEnHeal);
+		int setAttackEnHeal = enHeal.setAttack(attackEnHeal);
 		int specialPowerEnHeal = enHeal.getSpecialPower();
-	//	int setSpecialPowerEnHeal = enHeal.setSpecialPower(specialPowerEnHeal);
 		
 		
 		while(lifeEnHeal > 0){
@@ -182,6 +180,7 @@ public class Handle{
 			System.out.println("Life IA : " + setLifeEnHeal);
 			System.out.println("");
 			System.out.println("Your turn :");
+			System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
 			System.out.println("1 : Attack");
 			System.out.println("2 : Special Power");
 			int battle = Integer.parseInt(sc.nextLine());
@@ -229,6 +228,8 @@ public class Handle{
 			}
 
 			System.out.println("** Turn of IA **");
+			System.out.println("");
+			System.out.println("Life Point IA Tank:" + setLifeEnHeal + " " + "Attack IA Tank: " + actionIAAttack);
 			
 		       Random coin = new Random();
 		        int iA;
@@ -239,7 +240,6 @@ public class Handle{
 					 System.out.print("IA attacks :");
 					 System.out.println( - attackEnHeal);
 					 actionIALife = setLifeDam - attackEnHeal;
-					 //System.out.println(actionIALife);
 					 System.out.println(" ");
 					 System.out.println("Life Hero : " + actionIALife);
 					 System.out.println("Life IA : " + actionLife);
@@ -248,19 +248,13 @@ public class Handle{
 					 setLifeEnHeal = actionLife;
 					 	break;
 		            case 1 : 
-		            	System.out.println("IA heal");
-						System.out.println("Life Point IA :" + setLifeEnHeal);
-						System.out.println( "Healing : +" + specialPowerEnHeal);
-						actionIALife = setLifeEnHeal + specialPowerEnHeal;
-						System.out.println("Life Point IA :" + actionIALife);
-						 System.out.println(" ");
-						 System.out.println("Life Hero : " + actionLife);
-						 System.out.println("Life IA : " + actionIALife);
-						 System.out.println(" ");
-						 setLifeDam = actionLife;
-						 setLifeEnHeal = actionIALife;
-				
-		             break;
+		               	System.out.println("IA Tank become strong");
+						System.out.println( "+ attack :  "+ specialPowerEnHeal);
+						actionIAAttack = setAttackEnHeal + specialPowerEnHeal;
+						System.out.println("Life Point IA Tank:" + setLifeEnHeal + " " + "Attack IA Tank: " + actionIAAttack);
+						System.out.println("");
+						setAttackEnHeal = actionIAAttack;			
+								break;
 		             
 		            default :
 		            	iA = 1;
@@ -285,7 +279,7 @@ public class Handle{
 		int actionLife = 1;
 		int actionAttack = 1;
 		int actionIALife = 1;
-		//int actionIAAttack = 1;
+		int actionIAAttack = 1;
 		int i = 1;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -298,7 +292,6 @@ public class Handle{
 		int attackDam = dam.getAttack();
 		int setAttackDam = dam.setAttack(attackDam);
 		int specialPowerDam = dam.getSpecialPower();
-		int setSpecialPowerDam = dam.setSpecialPower(specialPowerDam);
 		
 		int lifeEnTan = enTan.getLifePoint();
 		int setLifeEnTan = enTan.setLifePoint(lifeEnTan);
@@ -314,6 +307,7 @@ public class Handle{
 						System.out.println("Life IA : " + setLifeEnTan);
 						System.out.println("");
 						System.out.println("Your turn :");
+						System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackDam);
 						System.out.println("1 : Attack");
 						System.out.println("2 : Special Power");
 						int battle = Integer.parseInt(sc.nextLine());
@@ -361,7 +355,8 @@ public class Handle{
 						}
 			
 						System.out.println("** Turn of IA **");
-						
+						System.out.println("");
+						System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
 					       Random coin = new Random();
 					        int iA;
 					        iA = coin.nextInt(2);
@@ -371,7 +366,6 @@ public class Handle{
 								 System.out.print("IA attacks :");
 								 System.out.println( - attackEnTan);
 								 actionIALife = setLifeDam - attackEnTan;
-								 //System.out.println(actionIALife);
 								 System.out.println(" ");
 								 System.out.println("Life Hero : " + actionIALife);
 								 System.out.println("Life IA : " + actionLife);
@@ -380,17 +374,12 @@ public class Handle{
 								 setLifeEnTan = actionLife;
 								 	break;
 					            case 1 : 
-					            	System.out.println("IA heal");
-									System.out.println("Life Point IA :" + setLifeEnTan);
-									System.out.println( "Healing : +" + specialPowerEnTan);
-									actionIALife = setLifeEnTan + specialPowerEnTan;
-									System.out.println("Life Point IA :" + actionIALife);
-									 System.out.println(" ");
-									 System.out.println("Life Hero : " + actionLife);
-									 System.out.println("Life IA : " + actionIALife);
-									 System.out.println(" ");
-									 setLifeDam = actionLife;
-									 setLifeEnTan = actionIALife;
+					            	System.out.println("IA Tank become strong");
+									System.out.println( "+ attack :  "+ specialPowerEnTan);
+									actionIAAttack = setAttackEnTan + specialPowerEnTan;
+									System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
+									System.out.println("");
+									setAttackEnTan = actionIAAttack;
 							
 					             break;
 					             
@@ -420,7 +409,7 @@ public class Handle{
 		int actionLife = 1;
 		int actionAttack = 1;
 		int actionIALife = 1;
-	//	int actionIAAttack = 1;
+		int actionIAAttack = 1;
 		int i = 1;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -437,10 +426,8 @@ public class Handle{
 		int lifeEnDam = enDam.getLifePoint();
 		int setLifeEnDam = enDam.setLifePoint(lifeEnDam);
 		int attackEnDam = enDam.getAttack();
-	//	int setAttackEnDam = enDam.setAttack(attackEnDam);
+		int setAttackEnDam = enDam.setAttack(attackEnDam);
 		int specialPowerEnDam = enDam.getSpecialPower();
-	//	int setSpecialPowerEnDam = enDam.setSpecialPower(specialPowerEnDam);
-		
 
 	 	
 		while(lifeEnDam > 0){
@@ -549,7 +536,7 @@ public class Handle{
 		int actionLife = 1;
 		int actionAttack = 1;
 		int actionIALife = 1;
-	//	int actionIAAttack = 1;
+		int actionIAAttack = 1;
 		int i = 1;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -562,14 +549,14 @@ public class Handle{
 		int attackHeal = heal.getAttack();
 		int setAttackHeal = heal.setAttack(attackHeal);
 		int specialPowerHeal = heal.getSpecialPower();
-	//	int setSpecialPowerDam = dam.setSpecialPower(specialPowerDam);
+
 		
 		int lifeEnHeal = enHeal.getLifePoint();
 		int setLifeEnHeal = enHeal.setLifePoint(lifeEnHeal);
 		int attackEnHeal = enHeal.getAttack();
-	//	int setAttackEnHeal = enHeal.setAttack(attackEnHeal);
+		int setAttackEnHeal = enHeal.setAttack(attackEnHeal);
 		int specialPowerEnHeal = enHeal.getSpecialPower();
-	//	int setSpecialPowerEnHeal = enHeal.setSpecialPower(specialPowerEnHeal);
+	
 		
 		
 		while(lifeEnHeal > 0){
@@ -579,6 +566,7 @@ public class Handle{
 			System.out.println("Life IA : " + setLifeEnHeal);
 			System.out.println("");
 			System.out.println("Your turn :");
+			System.out.println("Life Point :" + setLifeHeal + " " + "Attack : " + setAttackHeal);
 			System.out.println("1 : Attack");
 			System.out.println("2 : Special Power");
 			int battle = Integer.parseInt(sc.nextLine());
@@ -631,7 +619,6 @@ public class Handle{
 					 System.out.print("IA attacks :");
 					 System.out.println( - attackEnHeal);
 					 actionIALife = setLifeHeal - attackEnHeal;
-					 //System.out.println(actionIALife);
 					 System.out.println(" ");
 					 System.out.println("Life Hero : " + actionIALife);
 					 System.out.println("Life IA : " + actionLife);
@@ -676,7 +663,7 @@ public class Handle{
 		int actionLife = 1;
 		int actionAttack = 1;
 		int actionIALife = 1;
-		//int actionIAAttack = 1;
+		int actionIAAttack = 1;
 		int i = 1;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -689,7 +676,6 @@ public class Handle{
 		int attackHeal = heal.getAttack();
 		int setAttackHeal = heal.setAttack(attackHeal);
 		int specialPowerHeal = heal.getSpecialPower();
-		int setSpecialPowerHeal =heal.setSpecialPower(specialPowerHeal);
 		
 		int lifeEnTan = enTan.getLifePoint();
 		int setLifeEnTan = enTan.setLifePoint(lifeEnTan);
@@ -705,6 +691,7 @@ public class Handle{
 						System.out.println("Life IA : " + setLifeEnTan);
 						System.out.println("");
 						System.out.println("Your turn :");
+						System.out.println("Life Point :" + setLifeHeal + " " + "Attack : " + setAttackHeal);
 						System.out.println("1 : Attack");
 						System.out.println("2 : Special Power");
 						int battle = Integer.parseInt(sc.nextLine());
@@ -747,7 +734,8 @@ public class Handle{
 						}
 			
 						System.out.println("** Turn of IA **");
-						
+						System.out.println("");
+						System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
 					       Random coin = new Random();
 					        int iA;
 					        iA = coin.nextInt(2);
@@ -757,7 +745,6 @@ public class Handle{
 								 System.out.print("IA attacks :");
 								 System.out.println( - attackEnTan);
 								 actionIALife = setLifeHeal - attackEnTan;
-								 //System.out.println(actionIALife);
 								 System.out.println(" ");
 								 System.out.println("Life Hero : " + actionIALife);
 								 System.out.println("Life IA : " + actionLife);
@@ -766,17 +753,12 @@ public class Handle{
 								 setLifeEnTan = actionLife;
 								 	break;
 					            case 1 : 
-					            	System.out.println("IA heal");
-									System.out.println("Life Point IA :" + setLifeEnTan);
-									System.out.println( "Healing : +" + specialPowerEnTan);
-									actionIALife = setLifeEnTan + specialPowerEnTan;
-									System.out.println("Life Point IA :" + actionIALife);
-									 System.out.println(" ");
-									 System.out.println("Life Hero : " + actionLife);
-									 System.out.println("Life IA : " + actionIALife);
-									 System.out.println(" ");
-									 setLifeHeal = actionLife;
-									 setLifeEnTan = actionIALife;
+					            	System.out.println("IA Tank become strong");
+									System.out.println( "+ attack :  "+ specialPowerEnTan);
+									actionIAAttack = setAttackEnTan + specialPowerEnTan;
+									System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
+									System.out.println("");
+									setAttackEnTan = actionIAAttack;
 							
 					             break;
 					             
@@ -805,7 +787,7 @@ public class Handle{
 		int actionLife = 1;
 		int actionAttack = 1;
 		int actionIALife = 1;
-	//	int actionIAAttack = 1;
+		int actionIAAttack = 1;
 		int i = 1;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -822,10 +804,9 @@ public class Handle{
 		int lifeEnDam = enDam.getLifePoint();
 		int setLifeEnDam = enDam.setLifePoint(lifeEnDam);
 		int attackEnDam = enDam.getAttack();
-	//	int setAttackEnDam = enDam.setAttack(attackEnDam);
+		int setAttackEnDam = enDam.setAttack(attackEnDam);
 		int specialPowerEnDam = enDam.getSpecialPower();
-	//	int setSpecialPowerEnDam = enDam.setSpecialPower(specialPowerEnDam);
-		
+	
 
 	 	
 		while(lifeEnDam > 0){
@@ -934,7 +915,7 @@ public class Handle{
 		int actionLife = 1;
 		int actionAttack = 1;
 		int actionIALife = 1;
-	//	int actionIAAttack = 1;
+		int actionIAAttack = 1;
 		int i = 1;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -947,15 +928,13 @@ public class Handle{
 		int attackTan = tan.getAttack();
 		int setAttackTan = tan.setAttack(attackTan);
 		int specialPowerTan = tan.getSpecialPower();
-	//	int setSpecialPowerDam = dam.setSpecialPower(specialPowerDam);
-		
+
 		int lifeEnHeal = enHeal.getLifePoint();
 		int setLifeEnHeal = enHeal.setLifePoint(lifeEnHeal);
 		int attackEnHeal = enHeal.getAttack();
-	//	int setAttackEnHeal = enHeal.setAttack(attackEnHeal);
+		int setAttackEnHeal = enHeal.setAttack(attackEnHeal);
 		int specialPowerEnHeal = enHeal.getSpecialPower();
-	//	int setSpecialPowerEnHeal = enHeal.setSpecialPower(specialPowerEnHeal);
-		
+	
 		
 		while(lifeEnHeal > 0){
 			System.out.println("\n >Handle"+ " " + i + "<");
@@ -964,6 +943,7 @@ public class Handle{
 			System.out.println("Life IA : " + setLifeEnHeal);
 			System.out.println("");
 			System.out.println("Your turn :");
+			System.out.println("Life Point :" + setLifeTan + " " + "Attack : " + setAttackTan);
 			System.out.println("1 : Attack");
 			System.out.println("2 : Special Power");
 			int battle = Integer.parseInt(sc.nextLine());
@@ -1025,17 +1005,12 @@ public class Handle{
 					 setLifeEnHeal = actionLife;
 					 	break;
 		            case 1 : 
-		            	System.out.println("IA heal");
-						System.out.println("Life Point IA :" + setLifeEnHeal);
-						System.out.println( "Healing : +" + specialPowerEnHeal);
-						actionIALife = setLifeEnHeal + specialPowerEnHeal;
-						System.out.println("Life Point IA :" + actionIALife);
-						 System.out.println(" ");
-						 System.out.println("Life Hero : " + actionLife);
-						 System.out.println("Life IA : " + actionIALife);
-						 System.out.println(" ");
-						 setLifeTan = actionLife;
-						 setLifeEnHeal = actionIALife;
+		            	System.out.println("IA Healer become strong");
+						System.out.println( "+ attack :  "+ specialPowerEnHeal);
+						actionIAAttack = setAttackEnHeal + specialPowerEnHeal;
+						System.out.println("Life Point IA Tank:" + setLifeEnHeal + " " + "Attack IA Tank: " + actionIAAttack);
+						System.out.println("");
+						setAttackEnHeal = actionIAAttack;
 				
 		             break;
 		             
@@ -1061,7 +1036,7 @@ public class Handle{
 		int actionLife = 1;
 		int actionAttack = 1;
 		int actionIALife = 1;
-		//int actionIAAttack = 1;
+		int actionIAAttack = 1;
 		int i = 1;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -1074,7 +1049,6 @@ public class Handle{
 		int attackTan = tan.getAttack();
 		int setAttackTan = tan.setAttack(attackTan);
 		int specialPowerTan = tan.getSpecialPower();
-		int setSpecialPowerTan = tan.setSpecialPower(specialPowerTan);
 		
 		int lifeEnTan = enTan.getLifePoint();
 		int setLifeEnTan = enTan.setLifePoint(lifeEnTan);
@@ -1090,6 +1064,7 @@ public class Handle{
 						System.out.println("Life IA : " + setLifeEnTan);
 						System.out.println("");
 						System.out.println("Your turn :");
+						System.out.println("Life Point :" + setLifeTan + " " + "Attack : " + setAttackTan);
 						System.out.println("1 : Attack");
 						System.out.println("2 : Special Power");
 						int battle = Integer.parseInt(sc.nextLine());
@@ -1132,7 +1107,8 @@ public class Handle{
 						}
 			
 						System.out.println("** Turn of IA **");
-						
+						System.out.println("");
+						System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
 					       Random coin = new Random();
 					        int iA;
 					        iA = coin.nextInt(2);
@@ -1142,7 +1118,6 @@ public class Handle{
 								 System.out.print("IA attacks :");
 								 System.out.println( - attackEnTan);
 								 actionIALife = setLifeTan - attackEnTan;
-								 //System.out.println(actionIALife);
 								 System.out.println(" ");
 								 System.out.println("Life Hero : " + actionIALife);
 								 System.out.println("Life IA : " + actionLife);
@@ -1151,17 +1126,12 @@ public class Handle{
 								 setLifeEnTan = actionLife;
 								 	break;
 					            case 1 : 
-					            	System.out.println("IA heal");
-									System.out.println("Life Point IA :" + setLifeEnTan);
-									System.out.println( "Healing : +" + specialPowerEnTan);
-									actionIALife = setLifeEnTan + specialPowerEnTan;
-									System.out.println("Life Point IA :" + actionIALife);
-									 System.out.println(" ");
-									 System.out.println("Life Hero : " + actionLife);
-									 System.out.println("Life IA : " + actionIALife);
-									 System.out.println(" ");
-									 setLifeTan = actionLife;
-									 setLifeEnTan = actionIALife;
+					            	System.out.println("IA Tank become strong");
+									System.out.println( "+ attack :  "+ specialPowerEnTan);
+									actionIAAttack = setAttackEnTan + specialPowerEnTan;
+									System.out.println("Life Point IA Tank:" + setLifeEnTan + " " + "Attack IA Tank: " + actionIAAttack);
+									System.out.println("");
+									setAttackEnTan = actionIAAttack;
 							
 					             break;
 					             

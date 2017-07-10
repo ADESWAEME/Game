@@ -2,7 +2,6 @@ package enemy;
 
 import java.util.Scanner;
 
-import handle.Handle;
 
 public class EnemyTank extends EnemyCharacter{
 
@@ -15,7 +14,6 @@ public class EnemyTank extends EnemyCharacter{
 	
 	public int EnTan(){
 		System.out.println("Enemy : Tank");
-		//System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
 
 		return 0;
 	}
