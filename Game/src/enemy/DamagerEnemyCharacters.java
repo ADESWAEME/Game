@@ -6,15 +6,15 @@ import handle.Handle;
 
 public class DamagerEnemyCharacters {
 	
-public int damagerEnemyCharacters(){		
+public int damagerEnemyCharacters(int str){		
 		
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
+		//@SuppressWarnings("resource")
+		//Scanner sc = new Scanner(System.in);
 		System.out.println("Choose your enemy :");
 		System.out.println("1 : Enemy Damager");
 		System.out.println("2 : Enemy Healer");
 		System.out.println("3 : Enemy Tank");
-		int str = Integer.parseInt(sc.nextLine());
+		//int str = Integer.parseInt(sc.nextLine());
 		System.out.println("Your choosen : " + str);
 		System.out.println("");
 		
@@ -30,17 +30,17 @@ public int damagerEnemyCharacters(){
 	
 		case 1:
 			eD.EnDam();
-			handle.handle();
+			//handle.handle();
 			
 				break;
 		case 2:
 			eH.EnHeal();
-			handle.damAgainstHealer();
+			//handle.damAgainstHealer();
 			
 				break;
 		case 3 :
 			eT.EnTan();
-			handle.damAgainstTank();
+			//handle.damAgainstTank();
 			
 			
 		default :

@@ -12,10 +12,10 @@ public class Healer extends Character {
 	
 	public int Heal(){
 		
-		final HealerEnemyCharacters enemyCharacter = new HealerEnemyCharacters();
+//		final HealerEnemyCharacters enemyCharacter = new HealerEnemyCharacters();
 		System.out.println("Hero : Healer");
 		System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
-		enemyCharacter.healerEnemyCharacters();
+//		enemyCharacter.healerEnemyCharacters();
 		return 0;
 	}
 	@Override

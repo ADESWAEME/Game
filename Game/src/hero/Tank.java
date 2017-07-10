@@ -11,10 +11,10 @@ public class Tank extends Character{
 	
 	public int Tan(){
 		
-		final TankEnemyCharacters enemyCharacter = new TankEnemyCharacters();
+//		final TankEnemyCharacters enemyCharacter = new TankEnemyCharacters();
 		System.out.println("Hero : Tank");
 		System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
-		enemyCharacter.tankEnemyCharacters();
+//		enemyCharacter.tankEnemyCharacters();
 		return 0;
 	}
 	

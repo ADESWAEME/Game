@@ -6,7 +6,7 @@ import handle.Handle;
 
 public class TankEnemyCharacters {
 
-	public int tankEnemyCharacters(){
+	public int tankEnemyCharacters(int str){
 		
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -14,7 +14,7 @@ public class TankEnemyCharacters {
 		System.out.println("1 : Enemy Damager");
 		System.out.println("2 : Enemy Healer");
 		System.out.println("3 : Enemy Tank");
-		int str = Integer.parseInt(sc.nextLine());
+	//	int str = Integer.parseInt(sc.nextLine());
 		System.out.println("Your choosen : " + str);
 		System.out.println("");
 		

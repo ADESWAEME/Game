@@ -11,7 +11,7 @@ import handle.Handle;
 
 public class HealerEnemyCharacters {
 	
-	public int healerEnemyCharacters(){
+	public int healerEnemyCharacters(int str){
 		
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -19,7 +19,7 @@ public class HealerEnemyCharacters {
 		System.out.println("1 : Enemy Damager");
 		System.out.println("2 : Enemy Healer");
 		System.out.println("3 : Enemy Tank");
-		int str = Integer.parseInt(sc.nextLine());
+	//	int str = Integer.parseInt(sc.nextLine());
 		System.out.println("Your choosen : " + str);
 		System.out.println("");
 		
@@ -34,17 +34,17 @@ public class HealerEnemyCharacters {
 	
 		case 1:
 		eD.EnDam();
-		handle.healAgainstDamager();
+		//handle.healAgainstDamager();
 			
 				break;
 		case 2:
 		eH.EnHeal();
-		handle.healAgainstHealer();
+		//handle.healAgainstHealer();
 			
 				break;
 		case 3 :
 		eT.EnTan();
-		handle.healAgainstTank();
+		//handle.healAgainstTank();
 			
 			
 		default :

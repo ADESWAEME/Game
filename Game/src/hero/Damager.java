@@ -13,11 +13,11 @@ public class Damager extends Character {
 	
 	public int Dam(){
 		
-		final DamagerEnemyCharacters enemyCharacter = new DamagerEnemyCharacters();
+//		final DamagerEnemyCharacters enemyCharacter = new DamagerEnemyCharacters();
 		
 		System.out.println("Hero : Damager");
 		System.out.println("Life point : " + lifePoint + "\nAttack : " + attack);
-		enemyCharacter.damagerEnemyCharacters();
+//		enemyCharacter.damagerEnemyCharacters();
 		return 0;
 	}
 	
