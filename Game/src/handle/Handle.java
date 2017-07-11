@@ -1,7 +1,6 @@
 package handle;
 
 
-import java.util.Random;
 import java.util.Scanner;
 
 import enemy.EnemyDamager;
@@ -115,9 +114,9 @@ public class Handle{
 
 			System.out.println("** Turn of IA **");
 			
-		       Random coin = new Random();
+		      
 		        
-		        iA = coin.nextInt(3);
+		        iA = (int)(Math.random() * 3);
 		        switch(iA){
 		            case 0 : 
 		             System.out.println("Life Point :" + setLifeDam + " " + "Attack : " + setAttackEnDam);
@@ -269,9 +268,8 @@ public class Handle{
 			System.out.println("");
 			System.out.println("Life Point IA :" + setLifeEnHeal + " " + "Attack IA : " + actionIAAttack);
 			
-		       Random coin = new Random();
-		        int iA;
-		        iA = coin.nextInt(3);
+		      
+		        iA = (int)(Math.random() * 3);
 		        switch(iA){
 		            case 0 : 
 					 System.out.print("IA attacks :");
@@ -416,9 +414,8 @@ public class Handle{
 						System.out.println("** Turn of IA **");
 						System.out.println("");
 						System.out.println("Life Point IA :" + setLifeEnTan + " " + "Attack IA : " + actionIAAttack);
-					       Random coin = new Random();
-					        int iA;
-					        iA = coin.nextInt(3);
+					      
+					        iA = (int)(Math.random() * 3);
 					        switch(iA){
 					            case 0 : 
 					           	 System.out.println("Life Point hero : " + setLifeDam);
@@ -567,9 +564,8 @@ public class Handle{
 			System.out.println("");
 			System.out.println("Life Point IA :" + setLifeEnDam + " " + "Attack IA : " + actionIAAttack);
 		
-		       Random coin = new Random();
-		        int iA;
-		        iA = coin.nextInt(3);
+		       
+		        iA = (int)(Math.random() * 3);
 		        switch(iA){
 		            case 0 : 
 					 System.out.print("IA attacks :");
@@ -720,9 +716,7 @@ public class Handle{
 			System.out.println("");
 			System.out.println("Life Point IA :" + setLifeEnHeal + " " + "Attack IA : " + actionIAAttack);
 		
-		       Random coin = new Random();
-		        int iA;
-		        iA = coin.nextInt(3);
+		        iA = (int)(Math.random() * 3);
 		        switch(iA){
 		            case 0 : 
 					 System.out.print("IA attacks :");
@@ -867,9 +861,8 @@ public class Handle{
 						System.out.println("** Turn of IA **");
 						System.out.println("");
 						System.out.println("Life Point IA :" + setLifeEnTan + " " + "Attack IA : " + actionIAAttack);
-					       Random coin = new Random();
-					        int iA;
-					        iA = coin.nextInt(3);
+					      
+					        iA = (int)(Math.random() * 3);
 					        switch(iA){
 					            case 0 : 
 								 System.out.print("IA attacks :");
@@ -1015,9 +1008,8 @@ public class Handle{
 
 			System.out.println("** Turn of IA **");
 			
-		       Random coin = new Random();
-		        int iA;
-		        iA = coin.nextInt(3);
+		      
+		        iA = (int)(Math.random() * 3);
 		        switch(iA){
 		            case 0 : 
 					 System.out.print("IA attacks :");
@@ -1152,9 +1144,8 @@ public class Handle{
 			System.out.println("");
 			System.out.println("Life IA :" + setLifeEnHeal + " " + "Attack IA : " + actionIAAttack);
 		
-		       Random coin = new Random();
-		        int iA;
-		        iA = coin.nextInt(3);
+		       
+		        iA = (int)(Math.random() * 3);
 		        switch(iA){
 		            case 0 : 
 					 System.out.print("IA attacks :");
@@ -1298,9 +1289,9 @@ public class Handle{
 						System.out.println("** Turn of IA **");
 						System.out.println("");
 						System.out.println("Life Point IA :" + setLifeEnTan + " " + "Attack IA : " + actionIAAttack);
-					       Random coin = new Random();
+					      
 					        int iA;
-					        iA = coin.nextInt(3);
+					        iA = (int)(Math.random() * 3);
 					        switch(iA){
 					            case 0 : 
 								 System.out.print("IA attacks :");

@@ -2,7 +2,7 @@ package enemy;
 
 //import java.util.Scanner;
 
-import handle.Handle;
+//import handle.Handle;
 
 public class DamagerEnemyCharacters {
 	
@@ -24,7 +24,7 @@ public int damagerEnemyCharacters(int str){
 		EnemyHealer eH = new EnemyHealer();
 		EnemyTank eT = new EnemyTank();
 		
-		final Handle handle= new Handle();
+	//	final Handle handle= new Handle();
 		
 	switch (str){
 	
@@ -45,7 +45,7 @@ public int damagerEnemyCharacters(int str){
 			
 		default :
 			eD.EnDam();
-			handle.handle();
+			//handle.handle();
 			break;
 	}
 	

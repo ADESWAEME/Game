@@ -49,7 +49,7 @@ public class HealerEnemyCharacters {
 			
 		default :
 		eD.EnDam();
-		handle.handle();
+	//	handle.handle();
 			break;
 	}
 	return str;

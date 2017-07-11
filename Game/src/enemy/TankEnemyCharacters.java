@@ -2,7 +2,7 @@ package enemy;
 
 //import java.util.Scanner;
 
-import handle.Handle;
+//import handle.Handle;
 
 public class TankEnemyCharacters {
 
@@ -23,28 +23,28 @@ public class TankEnemyCharacters {
 		EnemyHealer eH = new EnemyHealer();
 		EnemyTank eT = new EnemyTank();
 		
-		final Handle handle= new Handle();
+		//final Handle handle= new Handle();
 		
 	switch (str){
 	
 		case 1:
 		eD.EnDam();
-		handle.tanAgainstDamager();
+		//handle.tanAgainstDamager();
 			
 				break;
 		case 2:
 		eH.EnHeal();
-		handle.tanAgainstHealer();
+		//handle.tanAgainstHealer();
 			
 				break;
 		case 3 :
 		eT.EnTan();
-		handle.tanAgainstTank();
+		//handle.tanAgainstTank();
 			
 			
 		default :
 		eD.EnDam();
-		handle.handle();
+		//handle.handle();
 			break;
 	}
 	return str;
