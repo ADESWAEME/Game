@@ -14,7 +14,7 @@ public class Handle{
 
 
 	int equationBloquer;
-	int iA = 4 ;
+	int iA;
 	
 	public int handle(){
 		

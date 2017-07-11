@@ -14,7 +14,6 @@ public class EnemyTank extends EnemyCharacter{
 	
 	public int EnTan(){
 		System.out.println("Enemy : Tank");
-
 		return 0;
 	}
 	
@@ -25,7 +24,7 @@ public class EnemyTank extends EnemyCharacter{
 		Scanner sc = new Scanner(System.in);
 	System.out.println("Choose lvl of your Enemy :");
 	System.out.println("1 : Easy");
-	System.out.println("2 : Way");
+	System.out.println("2 : Medium");
 	System.out.println("3 : Difficult");
 	int str = Integer.parseInt(sc.nextLine());
 	System.out.println("Your choosen : " + str);

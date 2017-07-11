@@ -78,7 +78,6 @@ public class Fenetre extends JFrame {
 		pan.add(damager);
 		damager.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent event){
-				System.out.println("lol");
 				final Character character = new Character();
 				character.start(1);
 			}
@@ -89,7 +88,6 @@ public class Fenetre extends JFrame {
 		pan.add(healer);
 		healer.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent event){
-				System.out.println("lol");
 				final Character character = new Character();
 				character.start(1);
 			}
@@ -101,7 +99,6 @@ public class Fenetre extends JFrame {
 		pan.add(tank);
 		tank.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent event){
-				System.out.println("lol");
 				final Character character = new Character();
 				character.start(3);
 			}
@@ -121,7 +118,6 @@ public class Fenetre extends JFrame {
 				final DamagerEnemyCharacters damagerEnC = new DamagerEnemyCharacters();
 				damagerEnC.damagerEnemyCharacters(1);
 				fenetre.setDefaultCloseOperation(fenetre.EXIT_ON_CLOSE);
-			}
 			
 		});
 		
@@ -199,7 +195,7 @@ public class Fenetre extends JFrame {
 				System.out.println("enemy damager");
 				final TankEnemyCharacters tanEnC = new TankEnemyCharacters();
 				tanEnC.tankEnemyCharacters(1);
-				fenetre.setDefaultCloseOperation(fenetre.EXIT_ON_CLOSE);
+				
 			}
 			
 		});
@@ -211,8 +207,7 @@ public class Fenetre extends JFrame {
 				System.out.println("enemy healer");
 				final TankEnemyCharacters tanEnC = new TankEnemyCharacters();
 				tanEnC.tankEnemyCharacters(2);
-				  fenetre.setDefaultCloseOperation(fenetre.EXIT_ON_CLOSE);
-				    
+				 
 			}
 		});
 		pan.add(tanEnemyTank);
@@ -221,7 +216,7 @@ public class Fenetre extends JFrame {
 				System.out.println("enemy tank");
 				final TankEnemyCharacters tanEnC = new TankEnemyCharacters();
 				tanEnC.tankEnemyCharacters(3); 
-				  fenetre.setDefaultCloseOperation(fenetre.EXIT_ON_CLOSE);
+				  
 				    
 				}
 			});
@@ -299,7 +294,7 @@ public class Fenetre extends JFrame {
 		tVsD.setBackground(Color.ORANGE);
 		tVsH.setBackground(Color.ORANGE);
 		tVsT.setBackground(Color.ORANGE);
-		JLabel tanVsDam = new JLabel("Hero Healer vs Enemy Damager :");
+		JLabel tanVsDam = new JLabel("Hero Tank vs Enemy Damager :");
 		pan.add(tanVsDam);
 		pan.add(tVsD);
 		tVsD.addActionListener(new ActionListener(){
@@ -309,7 +304,7 @@ public class Fenetre extends JFrame {
 			}
 		});
 		
-		JLabel tanVsHealer = new JLabel("Hero Healer vs Enemy Healer :");
+		JLabel tanVsHealer = new JLabel("Hero Tank vs Enemy Healer :");
 		pan.add(tanVsHealer);
 		pan.add(tVsH);
 		tVsH.addActionListener(new ActionListener(){
@@ -319,7 +314,7 @@ public class Fenetre extends JFrame {
 			}
 		});
 		
-		JLabel tanVsTank = new JLabel("Hero Healer vs Enemy Tank :");
+		JLabel tanVsTank = new JLabel("Hero Tank vs Enemy Tank :");
 		pan.add(tanVsTank);
 		pan.add(tVsT);
 		tVsT.addActionListener(new ActionListener(){
