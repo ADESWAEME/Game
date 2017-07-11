@@ -118,6 +118,7 @@ public class Fenetre extends JFrame {
 				final DamagerEnemyCharacters damagerEnC = new DamagerEnemyCharacters();
 				damagerEnC.damagerEnemyCharacters(1);
 				fenetre.setDefaultCloseOperation(fenetre.EXIT_ON_CLOSE);
+			}
 			
 		});
 		
