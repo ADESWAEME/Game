@@ -28,7 +28,7 @@ public class HealerEnemyCharacters {
 		EnemyHealer eH = new EnemyHealer();
 		EnemyTank eT = new EnemyTank();
 		
-		final Handle handle= new Handle();
+	//	final Handle handle= new Handle();
 		
 	switch (str){
 	
